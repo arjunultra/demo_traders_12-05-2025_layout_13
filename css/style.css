@@ -325,6 +325,197 @@ section.home-carousel .swiper-slide img {
   height: 100%;
   object-fit: cover;
 }
+/* safety page */
+/* Safety Guidelines Section Styles */
+
+.safety-guidelines {
+  background-color: var(--color5);
+  padding: 4rem 0;
+}
+
+.safety-guidelines .section-title {
+  color: var(--color1);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.safety-guidelines .section-subtitle {
+  color: var(--color4);
+  font-size: 1.125rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.safety-guidelines-divider {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.safety-guidelines-divider-icon {
+  font-size: 2rem;
+  color: var(--color3);
+}
+
+.safety-guidelines-column-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.safety-guidelines-column-title {
+  color: var(--color1);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.safety-guidelines-column-subtitle {
+  color: var(--color4);
+  opacity: 0.7;
+}
+
+.safety-guidelines-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.safety-guidelines-card {
+  perspective: 1000px;
+  height: 300px; /* Increased uniform height */
+}
+/* .safety-guidelines-card.safety-guidelines-card-warning {
+  background-color: #db2a1b;
+} */
+
+.safety-guidelines-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.safety-guidelines-card-front,
+.safety-guidelines-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 1rem; /* Added padding to prevent text overflow */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.safety-guidelines-card-front {
+  background-color: var(--color2);
+  color: var(--color4);
+}
+.safety-guidelines-card.safety-guidelines-card-warning
+  .safety-guidelines-card-front {
+  background-color: #db2a1b;
+  color: white;
+}
+
+.safety-guidelines-card-back {
+  background-color: var(--color3);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.safety-guidelines-card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color1);
+}
+
+.safety-guidelines-card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.safety-guidelines-card-text {
+  font-size: 0.9rem;
+  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limit to 4 lines */
+  -webkit-box-orient: vertical;
+}
+
+.safety-guidelines-cta {
+  background-color: var(--color2);
+  padding: 2rem;
+  border-radius: 15px;
+  color: var(--color4);
+}
+
+.safety-guidelines-btn {
+  background-color: var(--color1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.safety-guidelines-btn:hover {
+  background-color: var(--color3);
+  color: white;
+}
+
+/* Tablet Breakpoint */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .safety-guidelines-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .safety-guidelines .section-title {
+    font-size: 2rem;
+  }
+
+  .safety-guidelines-card {
+    height: 300px; /* Maintained uniform height */
+  }
+}
+
+/* Mobile Breakpoint */
+@media (min-width: 1px) and (max-width: 767.98px) {
+  .safety-guidelines {
+    padding: 2rem 0;
+  }
+
+  .safety-guidelines .section-title {
+    font-size: 1.75rem;
+  }
+
+  .safety-guidelines-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .safety-guidelines-card {
+    height: 300px; /* Maintained uniform height */
+  }
+
+  .safety-guidelines-column-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .safety-guidelines-cta {
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
 /* Footer Styles */
 .fireworks-footer {
   background-color: var(--color4);

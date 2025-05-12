@@ -244,3 +244,163 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
+// safety tips gsap code
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof gsap !== 'undefined' && typeof SplitText !== 'undefined') {
+    // Register the SplitText plugin
+    gsap.registerPlugin(SplitText);
+
+    // Select all safety guideline cards
+    const safetyCards = document.querySelectorAll('.safety-guidelines-card');
+    let activeCard = null;
+
+    // Loop through each card and initialize animations
+    safetyCards.forEach(function (card) {
+      const cardInner = card.querySelector('.safety-guidelines-card-inner');
+      const frontTitle = card.querySelector('.safety-guidelines-card-title');
+      const backText = card.querySelector('.safety-guidelines-card-text');
+
+      // Create SplitText instances
+      const frontTitleSplit = new SplitText(frontTitle, {
+        type: "chars,words",
+        position: "relative"
+      });
+
+      const backTextSplit = new SplitText(backText, {
+        type: "words",
+        position: "relative"
+      });
+
+      // Set initial states
+      gsap.set(cardInner, {
+        transformPerspective: 1000,
+        rotateY: 0,
+        transformStyle: "preserve-3d"
+      });
+
+      gsap.set(frontTitleSplit.chars, {
+        opacity: 1,
+        y: 0,
+        transformOrigin: "center center"
+      });
+
+      gsap.set(backTextSplit.words, {
+        opacity: 0,
+        x: -10,
+        transformOrigin: "left center"
+      });
+
+      // Hover In Animation
+      const hoverInTimeline = gsap.timeline({
+        paused: true,
+        defaults: { ease: "power3.inOut" }
+      });
+
+      hoverInTimeline
+        .to(frontTitleSplit.chars, {
+          opacity: 0,
+          y: -15,
+          duration: 0.4,
+          stagger: {
+            amount: 0.2,
+            from: "random",
+            ease: "power2.out"
+          }
+        }, 0)
+        .to(cardInner, {
+          rotateY: 180,
+          duration: 0.8,
+          ease: "power2.inOut"
+        }, 0.1)
+        .to(backTextSplit.words, {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          stagger: {
+            amount: 0.3,
+            ease: "back.out(1.2)"
+          }
+        }, 0.4);
+
+      // Hover Out Animation
+      const hoverOutTimeline = gsap.timeline({
+        paused: true,
+        defaults: { ease: "power2.inOut" }
+      });
+
+      hoverOutTimeline
+        .to(backTextSplit.words, {
+          opacity: 0,
+          x: -10,
+          duration: 0.4,
+          stagger: {
+            amount: 0.15,
+            from: "end",
+            ease: "power1.in"
+          }
+        }, 0)
+        .to(cardInner, {
+          rotateY: 0,
+          duration: 0.8,
+          ease: "power3.inOut"
+        }, 0.1)
+        .to(frontTitleSplit.chars, {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: {
+            amount: 0.25,
+            from: "random",
+            ease: "elastic.out(0.8, 0.6)"
+          }
+        }, 0.35);
+
+      // Animation Control Logic
+      card.addEventListener('mouseenter', function () {
+        if (activeCard && activeCard !== card) {
+          // If another card is active, reset it
+          const previousInner = activeCard.querySelector('.safety-guidelines-card-inner');
+          const previousBackText = activeCard.querySelector('.safety-guidelines-card-text');
+          const previousTitle = activeCard.querySelector('.safety-guidelines-card-title');
+
+          const previousTitleSplit = new SplitText(previousTitle, { type: "chars" });
+          const previousBackTextSplit = new SplitText(previousBackText, { type: "words" });
+
+          gsap.to(previousBackTextSplit.words, {
+            opacity: 0,
+            x: -10,
+            duration: 0.4,
+            stagger: 0.05
+          });
+
+          gsap.to(previousInner, {
+            rotateY: 0,
+            duration: 0.8,
+            ease: "power3.inOut"
+          });
+
+          gsap.to(previousTitleSplit.chars, {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            stagger: 0.05
+          });
+
+          activeCard = null;
+        }
+
+        hoverInTimeline.restart();
+        activeCard = card;
+      });
+
+      card.addEventListener('mouseleave', function () {
+        hoverOutTimeline.restart();
+        activeCard = null;
+      });
+    });
+  } else {
+    console.warn('GSAP or SplitText plugin not loaded');
+  }
+});
+
+

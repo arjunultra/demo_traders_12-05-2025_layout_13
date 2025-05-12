@@ -38,121 +38,124 @@
     <section class="safety-banner">
         <img class="img-fluid" src="images/safety-banner.webp" alt="demo traders about banner" title="Demo Traders">
     </section>
-    <!-- safety-tips -->
-    <section class="safety-guidelines py-5">
+    <!-- Safety Guidelines Section -->
+    <section class="safety-guidelines">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-12 text-center mb-5 safety-guidelines__header">
-                    <h2 class="section-title">Celebrate Safely, Shine Brightly</h2>
-                    <div class="safety-guidelines__divider">
-                        <div class="safety-guidelines__divider-icon">
+                <div class="col-lg-8 col-12 text-center mb-5 safety-guidelines-header">
+                    <h2 class="section-title">Celebrate with Caution</h2>
+                    <div class="safety-guidelines-divider">
+                        <div class="safety-guidelines-divider-icon">
                             <i class="bi bi-shield-fill-check"></i>
                         </div>
                     </div>
-                    <p class="section-subtitle">Follow these essential safety protocols to ensure your fireworks
-                        celebration remains joyful and incident-free</p>
+                    <p class="section-subtitle">Essential safety protocols to ensure your fireworks celebration remains
+                        joyful and secure</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-                    <div class="safety-guidelines__column safety-guidelines__column--practices">
-                        <div class="safety-guidelines__column-header">
-                            <div class="safety-guidelines__icon-wrapper">
+                    <div class="safety-guidelines-column safety-guidelines-column-practices">
+                        <div class="safety-guidelines-column-header">
+                            <div class="safety-guidelines-icon-wrapper">
                                 <i class="bi bi-check-circle-fill"></i>
                             </div>
-                            <h3 class="safety-guidelines__column-title">Best Practices</h3>
-                            <p class="safety-guidelines__column-subtitle">Follow these guidelines for a safe celebration
-                            </p>
+                            <h3 class="safety-guidelines-column-title">Best Practices</h3>
+                            <p class="safety-guidelines-column-subtitle">Crucial guidelines for a safe celebration</p>
                         </div>
 
-                        <div class="safety-guidelines__cards-container">
-                            <div class="safety-guidelines__card safety-guidelines__card--practice">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                        <div class="safety-guidelines-cards-container">
+                            <div class="safety-guidelines-card safety-guidelines-card-practice">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-shop"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">Licensed Vendors</h5>
+                                        <h5 class="safety-guidelines-card-title">Licensed Vendors</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Buy crackers only from licensed and
-                                            authorized shops to ensure quality and safety standards.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Purchase fireworks exclusively from
+                                            authorized and licensed shops to guarantee top-quality safety standards.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="safety-guidelines__card safety-guidelines__card--practice">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                            <div class="safety-guidelines-card safety-guidelines-card-practice">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-journal-text"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">Follow Instructions</h5>
+                                        <h5 class="safety-guidelines-card-title">Read Instructions</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Always read and follow label
-                                            instructions carefully before lighting any fireworks.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Carefully read and follow all
+                                            manufacturer instructions before lighting any fireworks to ensure proper
+                                            usage.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="safety-guidelines__card safety-guidelines__card--practice">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                            <div class="safety-guidelines-card safety-guidelines-card-practice">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-bucket"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">Emergency Ready</h5>
+                                        <h5 class="safety-guidelines-card-title">Emergency Ready</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Keep a bucket of water or sand nearby
-                                            during use for any unforeseen incidents.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Keep a bucket of water or sand nearby
+                                            during fireworks use to quickly extinguish any unexpected fires or
+                                            malfunctions.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="safety-guidelines__card safety-guidelines__card--practice">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                            <div class="safety-guidelines-card safety-guidelines-card-practice">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-tree"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">Open Spaces</h5>
+                                        <h5 class="safety-guidelines-card-title">Open Spaces</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Light crackers in open outdoor areas
-                                            only, away from buildings and dry vegetation.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Always light fireworks in open outdoor
+                                            areas, far from buildings, dry vegetation, and potential fire hazards.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="safety-guidelines__card safety-guidelines__card--practice">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                            <div class="safety-guidelines-card safety-guidelines-card-practice">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-arrows-fullscreen"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">Safe Distance</h5>
+                                        <h5 class="safety-guidelines-card-title">Safe Distance</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Maintain a safe distance after lighting
-                                            fireworks to prevent accidents.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Maintain a safe distance after lighting
+                                            fireworks. Immediately move away to a secure location to avoid potential
+                                            accidents.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="safety-guidelines__card safety-guidelines__card--practice">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                            <div class="safety-guidelines-card safety-guidelines-card-practice">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-people"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">Adult Supervision</h5>
+                                        <h5 class="safety-guidelines-card-title">Adult Supervision</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Always supervise children while they use
-                                            fireworks, even sparklers.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Ensure constant adult supervision for
+                                            children around fireworks, including seemingly harmless sparklers which can
+                                            reach extremely high temperatures.</p>
                                     </div>
                                 </div>
                             </div>
@@ -161,102 +164,109 @@
                 </div>
 
                 <div class="col-lg-6 col-12">
-                    <div class="safety-guidelines__column safety-guidelines__column--warnings">
-                        <div class="safety-guidelines__column-header">
-                            <div class="safety-guidelines__icon-wrapper safety-guidelines__icon-wrapper--warning">
+                    <div class="safety-guidelines-column safety-guidelines-column-warnings">
+                        <div class="safety-guidelines-column-header">
+                            <div class="safety-guidelines-icon-wrapper safety-guidelines-icon-wrapper-warning">
                                 <i class="bi bi-exclamation-triangle-fill"></i>
                             </div>
-                            <h3 class="safety-guidelines__column-title">Safety Warnings</h3>
-                            <p class="safety-guidelines__column-subtitle">Important precautions to avoid accidents</p>
+                            <h3 class="safety-guidelines-column-title">Safety Warnings</h3>
+                            <p class="safety-guidelines-column-subtitle">Critical precautions to prevent potential
+                                hazards</p>
                         </div>
 
-                        <div class="safety-guidelines__cards-container">
-                            <div class="safety-guidelines__card safety-guidelines__card--warning">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                        <div class="safety-guidelines-cards-container">
+                            <div class="safety-guidelines-card safety-guidelines-card-warning">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-lightbulb-off"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">Leave Duds Alone</h5>
+                                        <h5 class="safety-guidelines-card-title">Dud Handling</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Don't relight a dud cracker. Wait 20
-                                            minutes and then soak in water.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Never attempt to reignite a
+                                            malfunctioning firework. Wait 20 minutes, then completely submerge in water
+                                            to ensure it's fully neutralized.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="safety-guidelines__card safety-guidelines__card--warning">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                            <div class="safety-guidelines-card safety-guidelines-card-warning">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-fire"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">Proper Storage</h5>
+                                        <h5 class="safety-guidelines-card-title">Proper Storage</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Don't store fireworks near open flames,
-                                            heat sources, or flammable materials.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Store fireworks in a cool, dry place away
+                                            from open flames, heat sources, and flammable materials to prevent
+                                            accidental ignition.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="safety-guidelines__card safety-guidelines__card--warning">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                            <div class="safety-guidelines-card safety-guidelines-card-warning">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-house-door"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">Outdoor Only</h5>
+                                        <h5 class="safety-guidelines-card-title">Outdoor Only</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Never light fireworks inside closed
-                                            areas, rooms, or confined spaces.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Strictly prohibited: lighting fireworks
+                                            inside enclosed spaces, rooms, or any confined areas that increase the risk
+                                            of fire or injury.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="safety-guidelines__card safety-guidelines__card--warning">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                            <div class="safety-guidelines-card safety-guidelines-card-warning">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-person-x"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">Child Safety</h5>
+                                        <h5 class="safety-guidelines-card-title">Child Safety</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Don't give fireworks to small children
-                                            to handle or light unsupervised.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Absolutely do not allow young children to
+                                            handle or light fireworks unsupervised. Even seemingly safe fireworks can
+                                            cause serious injuries.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="safety-guidelines__card safety-guidelines__card--warning">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                            <div class="safety-guidelines-card safety-guidelines-card-warning">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-wallet2"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">No Pockets</h5>
+                                        <h5 class="safety-guidelines-card-title">No Pockets</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Never carry fireworks in your pocket or
-                                            on your person.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Never carry fireworks in your clothing
+                                            pockets. This can lead to accidental friction, heat, or pressure-induced
+                                            ignition.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="safety-guidelines__card safety-guidelines__card--warning">
-                                <div class="safety-guidelines__card-inner">
-                                    <div class="safety-guidelines__card-front">
-                                        <div class="safety-guidelines__card-icon">
+                            <div class="safety-guidelines-card safety-guidelines-card-warning">
+                                <div class="safety-guidelines-card-inner">
+                                    <div class="safety-guidelines-card-front">
+                                        <div class="safety-guidelines-card-icon">
                                             <i class="bi bi-bullseye"></i>
                                         </div>
-                                        <h5 class="safety-guidelines__card-title">No Aiming</h5>
+                                        <h5 class="safety-guidelines-card-title">No Aiming</h5>
                                     </div>
-                                    <div class="safety-guidelines__card-back">
-                                        <p class="safety-guidelines__card-text">Don't point or throw fireworks at
-                                            people, animals, vehicles, or structures.</p>
+                                    <div class="safety-guidelines-card-back">
+                                        <p class="safety-guidelines-card-text">Under no circumstances should fireworks
+                                            be pointed, thrown, or directed at people, animals, vehicles, or structures.
+                                            This is extremely dangerous.</p>
                                     </div>
                                 </div>
                             </div>
@@ -267,14 +277,14 @@
 
             <div class="row mt-5">
                 <div class="col-12">
-                    <div class="safety-guidelines__cta">
+                    <div class="safety-guidelines-cta">
                         <div class="row align-items-center">
                             <div class="col-lg-8 col-md-7 col-12 mb-4 mb-md-0">
-                                <h4>Ready to celebrate safely?</h4>
-                                <p>Visit our shop for certified and safety-compliant fireworks!</p>
+                                <h4>Prepared for a Safe Celebration?</h4>
+                                <p>Explore our collection of certified, safety-compliant fireworks!</p>
                             </div>
                             <div class="col-lg-4 col-md-5 col-12 text-md-right text-center">
-                                <a href="products.php" class="btn safety-guidelines__btn">Browse Products</a>
+                                <a href="products.php" class="btn safety-guidelines-btn">Browse Fireworks</a>
                             </div>
                         </div>
                     </div>
