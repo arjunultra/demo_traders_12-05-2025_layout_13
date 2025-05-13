@@ -43,7 +43,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-12 text-center mb-5 safety-guidelines-header">
-                    <h2 class="section-title">Celebrate with Caution</h2>
+                    <h2 class="section-title text-danger">Celebrate with Caution</h2>
                     <div class="safety-guidelines-divider">
                         <div class="safety-guidelines-divider-icon">
                             <i class="bi bi-shield-fill-check"></i>
@@ -61,7 +61,7 @@
                             <div class="safety-guidelines-icon-wrapper">
                                 <i class="bi bi-check-circle-fill"></i>
                             </div>
-                            <h3 class="safety-guidelines-column-title">Best Practices</h3>
+                            <h3 class="safety-guidelines-column-title text-success">Best Practices</h3>
                             <p class="safety-guidelines-column-subtitle">Crucial guidelines for a safe celebration</p>
                         </div>
 
@@ -169,7 +169,7 @@
                             <div class="safety-guidelines-icon-wrapper safety-guidelines-icon-wrapper-warning">
                                 <i class="bi bi-exclamation-triangle-fill"></i>
                             </div>
-                            <h3 class="safety-guidelines-column-title">Safety Warnings</h3>
+                            <h3 class="safety-guidelines-column-title text-danger">Safety Warnings</h3>
                             <p class="safety-guidelines-column-subtitle">Critical precautions to prevent potential
                                 hazards</p>
                         </div>

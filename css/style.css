@@ -325,6 +325,558 @@ section.home-carousel .swiper-slide img {
   height: 100%;
   object-fit: cover;
 }
+/* Welcome Section Styles */
+.welcome-section {
+  background-color: var(--color5); /* Gainsboro Grey background */
+  padding: 60px 0;
+}
+
+.welcome-section .welcome-heading {
+  color: var(--color1); /* Dark Red */
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.welcome-section .welcome-subheading {
+  color: var(--color3); /* Indigo */
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.welcome-section .welcome-text {
+  color: var(--color4); /* Almost Black */
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.welcome-section .welcome-image {
+  border-radius: 8px;
+  height: auto;
+  max-width: 100%;
+}
+
+.welcome-section .welcome-cta {
+  background-color: var(--color2); /* YellowGreen */
+  border: none;
+  border-radius: 4px;
+  color: var(--color4); /* Almost Black */
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+}
+
+.welcome-section .welcome-cta:hover {
+  background-color: var(--color1); /* Dark Red */
+  color: var(--color5); /* Gainsboro Grey */
+  transform: translateY(-3px);
+}
+
+.welcome-section .welcome-cta-icon {
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+.welcome-section .welcome-features {
+  margin-top: 40px;
+}
+
+.welcome-section .welcome-feature-item {
+  align-items: center;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.welcome-section .welcome-feature-icon {
+  color: var(--color2); /* YellowGreen */
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.welcome-section .welcome-feature-text {
+  color: var(--color4); /* Almost Black */
+  font-size: 16px;
+}
+
+/* Tablet Breakpoint (md screens) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .welcome-section .welcome-heading {
+    font-size: 36px;
+  }
+
+  .welcome-section .welcome-subheading {
+    font-size: 20px;
+  }
+
+  .welcome-section .welcome-image {
+    margin-top: 30px;
+  }
+
+  .welcome-section .welcome-features {
+    margin-top: 30px;
+  }
+}
+
+/* Mobile Breakpoint (sm screens) */
+@media (min-width: 1px) and (max-width: 767.98px) {
+  .welcome-section {
+    padding: 40px 0;
+  }
+
+  .welcome-section .welcome-heading {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .welcome-section .welcome-subheading {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .welcome-section .welcome-text {
+    text-align: center;
+  }
+
+  .welcome-section .welcome-image {
+    margin: 30px auto;
+    max-width: 90%;
+  }
+
+  .welcome-section .welcome-cta {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .welcome-section .welcome-features {
+    margin-top: 30px;
+  }
+}
+/* Index Achievements Section Styles */
+.index-achievements {
+  background-image: url("../images/index-achievements-bg.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  position: relative;
+}
+
+.index-achievements::before {
+  background-color: rgba(
+    16,
+    16,
+    16,
+    0.85
+  ); /* Using var(--color4) with opacity */
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.index-achievements .container {
+  position: relative;
+  z-index: 2;
+}
+
+.index-achievements .index-achievements-heading {
+  color: var(--color5); /* Gainsboro Grey */
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.index-achievements .index-achievements-subtext {
+  color: var(--color5); /* Gainsboro Grey */
+  font-size: 18px;
+  margin: 0 auto 60px;
+  max-width: 800px;
+  opacity: 0.9;
+}
+
+.index-achievements .index-achievements-counter-box {
+  align-items: center;
+  background-color: rgba(
+    75,
+    0,
+    130,
+    0.4
+  ); /* var(--color3) Indigo with opacity */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 30px 15px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.index-achievements .index-achievements-counter-box:hover {
+  background-color: rgba(
+    139,
+    0,
+    0,
+    0.7
+  ); /* var(--color1) Dark Red with opacity */
+  transform: translateY(-10px);
+}
+
+.index-achievements .index-achievements-icon {
+  color: var(--color2); /* YellowGreen */
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.index-achievements .index-achievements-count {
+  align-items: baseline;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.index-achievements .index-achievements-number {
+  color: var(--color5); /* Gainsboro Grey */
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block; /* Helps with GSAP animations */
+}
+
+.index-achievements .index-achievements-suffix {
+  color: var(--color2); /* YellowGreen */
+  font-size: 32px;
+  font-weight: 700;
+  margin-left: 2px;
+  display: inline-block; /* Helps with GSAP animations */
+}
+
+.index-achievements .index-achievements-title {
+  color: var(--color5); /* Gainsboro Grey */
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Tablet Breakpoint (md screens) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .index-achievements {
+    padding: 80px 0;
+  }
+
+  .index-achievements .index-achievements-heading {
+    font-size: 36px;
+  }
+
+  .index-achievements .index-achievements-subtext {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .index-achievements .index-achievements-counter-box {
+    height: 220px;
+    padding: 25px 10px;
+  }
+
+  .index-achievements .index-achievements-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+
+  .index-achievements .index-achievements-number {
+    font-size: 38px;
+  }
+
+  .index-achievements .index-achievements-suffix {
+    font-size: 28px;
+  }
+
+  .index-achievements .index-achievements-title {
+    font-size: 16px;
+  }
+}
+
+/* Mobile Breakpoint (sm screens) */
+@media (min-width: 1px) and (max-width: 767.98px) {
+  .index-achievements {
+    padding: 60px 0;
+  }
+
+  .index-achievements .index-achievements-heading {
+    font-size: 30px;
+  }
+
+  .index-achievements .index-achievements-subtext {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .index-achievements .index-achievements-counter-box {
+    height: 200px;
+    margin-bottom: 20px;
+    padding: 20px 10px;
+  }
+
+  .index-achievements .index-achievements-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .index-achievements .index-achievements-number {
+    font-size: 34px;
+  }
+
+  .index-achievements .index-achievements-suffix {
+    font-size: 24px;
+  }
+
+  .index-achievements .index-achievements-title {
+    font-size: 15px;
+  }
+}
+.index-achievements-counter-box {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+.index-achievements-icon {
+  opacity: 1 !important;
+  transform: scale(1) rotate(0) !important;
+}
+/* index products-section */
+/* Products Section Styles */
+.products-section {
+  background-color: var(--color5);
+  position: relative;
+}
+
+/* Section Titles */
+.products-section-title {
+  color: var(--color3);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.products-section-subtitle {
+  color: var(--color4);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Swiper Container */
+.products-swiper-container {
+  padding: 20px 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Product Cards */
+.products-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  will-change: transform, box-shadow, border-color, filter; /* Add more properties for GSAP */
+}
+
+.products-card-image-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.products-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+.products-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.products-card-title {
+  color: var(--color1);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  will-change: color, font-weight; /* For GSAP */
+}
+
+.products-card-description {
+  color: var(--color4);
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.products-card-button {
+  background-color: var(--color2);
+  color: var(--color4);
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Keep button transitions */
+}
+
+.products-card-button:hover {
+  background-color: var(--color1);
+  color: #fff;
+}
+
+.products-card-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(155, 205, 50, 0.4);
+}
+
+/* Add Bootstrap icon to button */
+.products-card-button::after {
+  content: "\f138";
+  font-family: "bootstrap-icons";
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.products-card-button:hover::after {
+  transform: translateX(3px);
+}
+
+/* Swiper Navigation and Pagination */
+.products-swiper-button-next,
+.products-swiper-button-prev {
+  color: var(--color3);
+  transition: all 0.3s ease;
+}
+
+.products-swiper-button-next:hover,
+.products-swiper-button-prev:hover {
+  color: var(--color1);
+  transform: scale(1.1);
+}
+
+.products-swiper-pagination .swiper-pagination-bullet {
+  background-color: var(--color3);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.products-swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color1);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Tablet (md screens) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .products-section-title {
+    font-size: 2.2rem;
+  }
+
+  .products-section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .products-card-image-container {
+    height: 180px;
+  }
+
+  .products-card-content {
+    padding: 1.25rem;
+  }
+
+  .products-card-title {
+    font-size: 1.35rem;
+  }
+
+  .products-card-description {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .products-card-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .products-swiper-container {
+    padding: 15px 35px;
+  }
+}
+
+/* Mobile (sm screens) */
+@media (min-width: 1px) and (max-width: 767.98px) {
+  .products-section-title {
+    font-size: 2rem;
+  }
+
+  .products-section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .products-card-image-container {
+    height: 160px;
+  }
+
+  .products-card-content {
+    padding: 1rem;
+  }
+
+  .products-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .products-card-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .products-card-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .products-swiper-container {
+    padding: 10px 30px;
+  }
+
+  .products-swiper-button-next,
+  .products-swiper-button-prev {
+    display: none;
+  }
+}
+/* index page ends */
 /* safety page */
 /* Safety Guidelines Section Styles */
 

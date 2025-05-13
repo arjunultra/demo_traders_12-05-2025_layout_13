@@ -48,7 +48,231 @@
 			</div>
 		</div>
 	</section>
+	<!-- index page first section -->
+	<!-- Welcome Section -->
+	<section class="welcome-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6 col-lg-6">
+					<h1 class="welcome-heading">Welcome to Demo Traders</h1>
+					<h2 class="welcome-subheading">Premium Fireworks for Every Celebration</h2>
+					<p class="welcome-text">
+						Discover our extensive collection of high-quality fireworks for retail and wholesale purchase.
+						From colorful sparklers to grand finale displays, we have everything to make your
+						celebrations memorable and spectacular.
+					</p>
+					<a href="products.php">
+						<button class="welcome-cta">
+							Shop Now
+							<i class="bi bi-arrow-right welcome-cta-icon"></i>
+						</button>
+					</a>
 
+					<div class="welcome-features">
+						<div class="welcome-feature-item">
+							<i class="bi bi-check-circle welcome-feature-icon"></i>
+							<span class="welcome-feature-text">Premium Quality Products</span>
+						</div>
+						<div class="welcome-feature-item">
+							<i class="bi bi-truck welcome-feature-icon"></i>
+							<span class="welcome-feature-text">Fast Nationwide Delivery</span>
+						</div>
+						<div class="welcome-feature-item">
+							<i class="bi bi-shield-check welcome-feature-icon"></i>
+							<span class="welcome-feature-text">Safety Certified Products</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-6">
+					<img src="images/hero-image.webp" alt="Colorful Fireworks Display" class="welcome-image">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Index Achievements Section -->
+	<section class="index-achievements">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="index-achievements-heading">Our Fireworks Legacy</h2>
+					<p class="index-achievements-subtext">Creating magical moments and lighting up celebrations across
+						the nation with premium quality fireworks</p>
+				</div>
+			</div>
+
+			<div class="row index-achievements-counters">
+				<!-- Counter 1 -->
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="index-achievements-counter-box">
+						<i class="bi bi-calendar-check index-achievements-icon"></i>
+						<div class="index-achievements-count">
+							<span class="index-achievements-number odometer" data-count="25">0</span>
+							<span class="index-achievements-suffix">+</span>
+						</div>
+						<h3 class="index-achievements-title">Years Experience</h3>
+					</div>
+				</div>
+
+				<!-- Counter 2 -->
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="index-achievements-counter-box">
+						<i class="bi bi-box-seam index-achievements-icon"></i>
+						<div class="index-achievements-count">
+							<span class="index-achievements-number odometer" data-count="500">0</span>
+							<span class="index-achievements-suffix">+</span>
+						</div>
+						<h3 class="index-achievements-title">Product Varieties</h3>
+					</div>
+				</div>
+
+				<!-- Counter 3 -->
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="index-achievements-counter-box">
+						<i class="bi bi-people-fill index-achievements-icon"></i>
+						<div class="index-achievements-count">
+							<span class="index-achievements-number odometer" data-count="15000">0</span>
+							<span class="index-achievements-suffix">+</span>
+						</div>
+						<h3 class="index-achievements-title">Happy Customers</h3>
+					</div>
+				</div>
+
+				<!-- Counter 4 -->
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="index-achievements-counter-box">
+						<i class="bi bi-award index-achievements-icon"></i>
+						<div class="index-achievements-count">
+							<span class="index-achievements-number odometer" data-count="30">0</span>
+							<span class="index-achievements-suffix">+</span>
+						</div>
+						<h3 class="index-achievements-title">Industry Awards</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- index products swiper -->
+	<section class="products-section py-5">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-12 text-center">
+					<h2 class="products-section-title">Our Premium Fireworks</h2>
+					<p class="products-section-subtitle">Discover our wide range of high-quality fireworks for all
+						occasions</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<!-- Swiper -->
+					<div class="products-swiper-container">
+						<div class="swiper-wrapper">
+							<!-- Slide 1: Bombs -->
+							<div class="swiper-slide products-swiper-slide">
+								<div class="products-card">
+									<div class="products-card-image-container">
+										<img src="images/product-1.webp" alt="Firework Bombs"
+											class="products-card-image">
+									</div>
+									<div class="products-card-content">
+										<h3 class="products-card-title">Bombs</h3>
+										<p class="products-card-description">Experience the thrill of our premium
+											explosive bombs with vibrant colors and thunderous sound effects.</p>
+										<button class="products-card-button">Buy Now</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 2: Ground Chakkars -->
+							<div class="swiper-slide products-swiper-slide">
+								<div class="products-card">
+									<div class="products-card-image-container">
+										<img src="images/product-2.webp" alt="Ground Chakkars"
+											class="products-card-image">
+									</div>
+									<div class="products-card-content">
+										<h3 class="products-card-title">Ground Chakkars</h3>
+										<p class="products-card-description">Mesmerizing spinning wheels that create
+											beautiful circular patterns of sparks and colors on the ground.</p>
+										<button class="products-card-button">Buy Now</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 3: Flowerpots -->
+							<div class="swiper-slide products-swiper-slide">
+								<div class="products-card">
+									<div class="products-card-image-container">
+										<img src="images/product-3.webp" alt="Flowerpots" class="products-card-image">
+									</div>
+									<div class="products-card-content">
+										<h3 class="products-card-title">Flowerpots</h3>
+										<p class="products-card-description">Spectacular fountains that emit colorful
+											showers of sparks resembling blooming flowers in the night sky.</p>
+										<button class="products-card-button">Buy Now</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 4: Sparklers -->
+							<div class="swiper-slide products-swiper-slide">
+								<div class="products-card">
+									<div class="products-card-image-container">
+										<img src="images/product-4.webp" alt="Sparklers" class="products-card-image">
+									</div>
+									<div class="products-card-content">
+										<h3 class="products-card-title">Sparklers</h3>
+										<p class="products-card-description">Hand-held fireworks that emit bright
+											sparkles and colorful flames, perfect for all ages and celebrations.</p>
+										<button class="products-card-button">Buy Now</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 5: Rockets -->
+							<div class="swiper-slide products-swiper-slide">
+								<div class="products-card">
+									<div class="products-card-image-container">
+										<img src="images/product-5.webp" alt="Rockets" class="products-card-image">
+									</div>
+									<div class="products-card-content">
+										<h3 class="products-card-title">Rockets</h3>
+										<p class="products-card-description">High-flying fireworks that soar into the
+											sky before exploding into breathtaking aerial displays.</p>
+										<button class="products-card-button">Buy Now</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 6: Kids Crackers -->
+							<div class="swiper-slide products-swiper-slide">
+								<div class="products-card">
+									<div class="products-card-image-container">
+										<img src="images/product-6.webp" alt="Kids Crackers"
+											class="products-card-image">
+									</div>
+									<div class="products-card-content">
+										<h3 class="products-card-title">Kids Crackers</h3>
+										<p class="products-card-description">Safe and fun fireworks specially designed
+											for children to enjoy festivities with minimal supervision.</p>
+										<button class="products-card-button">Buy Now</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Add Navigation -->
+						<div class="products-swiper-button-next swiper-button-next"></div>
+						<div class="products-swiper-button-prev swiper-button-prev"></div>
+
+						<!-- Add Pagination -->
+						<div class="products-swiper-pagination swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<?php include_once "footer.php"; ?>
 	<div class="fixed point w0">
