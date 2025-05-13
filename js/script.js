@@ -244,164 +244,198 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
-// safety tips gsap code
+// safety page gsap
 document.addEventListener('DOMContentLoaded', function () {
   if (typeof gsap !== 'undefined' && typeof SplitText !== 'undefined') {
-    // Register the SplitText plugin
-    gsap.registerPlugin(SplitText);
+    gsap.registerPlugin(SplitText, ScrollTrigger);
 
-    // Select all safety guideline cards
-    const safetyCards = document.querySelectorAll('.safety-guidelines-card');
-    let activeCard = null;
+    // === Header Animation ===
+    const header = document.querySelector('.safety-guidelines-header');
+    if (header) {
+      const headerTitle = new SplitText(header.querySelector('.section-title'), { type: 'words,chars' });
+      const headerSubtitle = new SplitText(header.querySelector('.section-subtitle'), { type: 'words' });
 
-    // Loop through each card and initialize animations
-    safetyCards.forEach(function (card) {
-      const cardInner = card.querySelector('.safety-guidelines-card-inner');
-      const frontTitle = card.querySelector('.safety-guidelines-card-title');
-      const backText = card.querySelector('.safety-guidelines-card-text');
-
-      // Create SplitText instances
-      const frontTitleSplit = new SplitText(frontTitle, {
-        type: "chars,words",
-        position: "relative"
-      });
-
-      const backTextSplit = new SplitText(backText, {
-        type: "words",
-        position: "relative"
-      });
-
-      // Set initial states
-      gsap.set(cardInner, {
-        transformPerspective: 1000,
-        rotateY: 0,
-        transformStyle: "preserve-3d"
-      });
-
-      gsap.set(frontTitleSplit.chars, {
-        opacity: 1,
-        y: 0,
-        transformOrigin: "center center"
-      });
-
-      gsap.set(backTextSplit.words, {
-        opacity: 0,
-        x: -10,
-        transformOrigin: "left center"
-      });
-
-      // Hover In Animation
-      const hoverInTimeline = gsap.timeline({
-        paused: true,
-        defaults: { ease: "power3.inOut" }
-      });
-
-      hoverInTimeline
-        .to(frontTitleSplit.chars, {
-          opacity: 0,
-          y: -15,
-          duration: 0.4,
-          stagger: {
-            amount: 0.2,
-            from: "random",
-            ease: "power2.out"
-          }
-        }, 0)
-        .to(cardInner, {
-          rotateY: 180,
-          duration: 0.8,
-          ease: "power2.inOut"
-        }, 0.1)
-        .to(backTextSplit.words, {
-          opacity: 1,
-          x: 0,
-          duration: 0.6,
-          stagger: {
-            amount: 0.3,
-            ease: "back.out(1.2)"
-          }
-        }, 0.4);
-
-      // Hover Out Animation
-      const hoverOutTimeline = gsap.timeline({
-        paused: true,
-        defaults: { ease: "power2.inOut" }
-      });
-
-      hoverOutTimeline
-        .to(backTextSplit.words, {
-          opacity: 0,
-          x: -10,
-          duration: 0.4,
-          stagger: {
-            amount: 0.15,
-            from: "end",
-            ease: "power1.in"
-          }
-        }, 0)
-        .to(cardInner, {
-          rotateY: 0,
-          duration: 0.8,
-          ease: "power3.inOut"
-        }, 0.1)
-        .to(frontTitleSplit.chars, {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          stagger: {
-            amount: 0.25,
-            from: "random",
-            ease: "elastic.out(0.8, 0.6)"
-          }
-        }, 0.35);
-
-      // Animation Control Logic
-      card.addEventListener('mouseenter', function () {
-        if (activeCard && activeCard !== card) {
-          // If another card is active, reset it
-          const previousInner = activeCard.querySelector('.safety-guidelines-card-inner');
-          const previousBackText = activeCard.querySelector('.safety-guidelines-card-text');
-          const previousTitle = activeCard.querySelector('.safety-guidelines-card-title');
-
-          const previousTitleSplit = new SplitText(previousTitle, { type: "chars" });
-          const previousBackTextSplit = new SplitText(previousBackText, { type: "words" });
-
-          gsap.to(previousBackTextSplit.words, {
-            opacity: 0,
-            x: -10,
-            duration: 0.4,
-            stagger: 0.05
-          });
-
-          gsap.to(previousInner, {
-            rotateY: 0,
-            duration: 0.8,
-            ease: "power3.inOut"
-          });
-
-          gsap.to(previousTitleSplit.chars, {
-            opacity: 1,
-            y: 0,
-            duration: 0.5,
-            stagger: 0.05
-          });
-
-          activeCard = null;
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: header,
+          start: "top 80%",
         }
+      })
+      .from(headerTitle.chars, {
+        opacity: 0,
+        y: 50,
+        stagger: 0.02,
+        duration: 0.6,
+        ease: "back.out(1.7)"
+      })
+      .from(header.querySelector('.safety-guidelines-divider'), {
+        scale: 0,
+        opacity: 0,
+        duration: 0.6,
+        ease: "elastic.out(1, 0.5)"
+      }, "-=0.4")
+      .from(headerSubtitle.words, {
+        opacity: 0,
+        y: 20,
+        stagger: 0.03,
+        duration: 0.6,
+        ease: "power3.out"
+      }, "-=0.3");
+    }
 
-        hoverInTimeline.restart();
-        activeCard = card;
-      });
-
-      card.addEventListener('mouseleave', function () {
-        hoverOutTimeline.restart();
-        activeCard = null;
+    // === Column Animations with ScrollTrigger Batching ===
+    gsap.utils.toArray('.safety-guidelines-column').forEach((column, index) => {
+      gsap.from(column, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        delay: index * 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: column,
+          start: "top 85%",
+          toggleActions: "play none none none",
+          batch: true
+        }
       });
     });
+
+    // === Cards Animation with Flip Logic (Opacity for Front) ===
+    const cardState = new WeakMap();
+    const allCards = gsap.utils.toArray('.safety-guidelines-card');
+    let currentlyActiveCard = null;
+
+    allCards.forEach((card) => {
+      const cardInner = card.querySelector('.safety-guidelines-card-inner');
+      const cardFront = card.querySelector('.safety-guidelines-card-front');
+      const frontTitle = new SplitText(card.querySelector('.safety-guidelines-card-title'), { type: "chars" });
+      const backText = new SplitText(card.querySelector('.safety-guidelines-card-text'), { type: "words" });
+
+      cardState.set(card, { isFlipped: false, animation: null });
+
+      function flipCard(direction) {
+        const state = cardState.get(card);
+        if (state.animation) state.animation.kill();
+
+        const tl = gsap.timeline();
+
+        if (direction === 'toBack') {
+          tl.to(frontTitle.chars, {
+            opacity: 0,
+            y: -10,
+            stagger: 0.02,
+            duration: 0.2
+          })
+          .set(frontTitle.chars, { clearProps: 'opacity,y' })
+          .to(cardInner, {
+            rotateY: 180,
+            duration: 0.6,
+            ease: "power3.inOut"
+          })
+          .to(cardFront, {
+            opacity: 0,
+            duration: 0.2,
+            delay: 0.4 // Ensure rotation is mostly done
+          }, "<")
+          .fromTo(backText.words, {
+            opacity: 0,
+            x: -10
+          }, {
+            opacity: 1,
+            x: 0,
+            stagger: 0.03,
+            duration: 0.4
+          }, "<0.2");
+        } else {
+          tl.to(backText.words, {
+            opacity: 0,
+            x: 10,
+            stagger: 0.02,
+            duration: 0.2
+          })
+          .set(backText.words, { clearProps: 'opacity,x' })
+          .to(cardInner, {
+            rotateY: 0,
+            duration: 0.6,
+            ease: "power3.inOut"
+          })
+          .to(cardFront, {
+            opacity: 1,
+            duration: 0.2,
+            delay: 0.4 // Ensure rotation is mostly done
+          }, "<")
+          .fromTo(frontTitle.chars, {
+            opacity: 0,
+            y: 15
+          }, {
+            opacity: 1,
+            y: 0,
+            stagger: 0.02,
+            duration: 0.4
+          }, "<0.2");
+        }
+        cardState.set(card, { isFlipped: direction === 'toBack', animation: tl });
+      }
+
+      card.addEventListener('mouseenter', () => {
+        if (currentlyActiveCard && currentlyActiveCard !== card) {
+          const previousState = cardState.get(currentlyActiveCard);
+          if (previousState.isFlipped) {
+            flipCard.call(currentlyActiveCard, 'toFront');
+          }
+        }
+        if (!cardState.get(card).isFlipped) {
+          flipCard('toBack');
+          currentlyActiveCard = card;
+        }
+      });
+
+      card.addEventListener('mouseleave', () => {
+        if (cardState.get(card).isFlipped && currentlyActiveCard === card) {
+          flipCard('toFront');
+          currentlyActiveCard = null;
+        }
+      });
+
+      card.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        if (currentlyActiveCard && currentlyActiveCard !== card) {
+          const previousState = cardState.get(currentlyActiveCard);
+          if (previousState.isFlipped) {
+            flipCard.call(currentlyActiveCard, 'toFront');
+          }
+        }
+
+        const state = cardState.get(card);
+        if (state.isFlipped) {
+          flipCard('toFront');
+          currentlyActiveCard = null;
+        } else {
+          flipCard('toBack');
+          currentlyActiveCard = card;
+        }
+      }, { passive: false });
+    });
+
+    // === CTA Animation ===
+    const cta = document.querySelector('.safety-guidelines-cta');
+    if (cta) {
+      gsap.from(cta, {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: cta,
+          start: "top 90%",
+        }
+      });
+    }
   } else {
     console.warn('GSAP or SplitText plugin not loaded');
   }
 });
+
 // contact page gsap
 // GSAP Animation for Fireworks Contact Section
 document.addEventListener("DOMContentLoaded", function() {

@@ -328,188 +328,372 @@ section.home-carousel .swiper-slide img {
 /* safety page */
 /* Safety Guidelines Section Styles */
 
+/* Safety Guidelines Section Styling */
 .safety-guidelines {
+  padding: 80px 0;
   background-color: var(--color5);
-  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Header */
+.safety-guidelines .safety-guidelines-header {
+  margin-bottom: 60px;
 }
 
 .safety-guidelines .section-title {
-  color: var(--color1);
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  color: var(--color4);
   font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .safety-guidelines .section-subtitle {
   color: var(--color4);
-  font-size: 1.125rem;
-  max-width: 800px;
+  font-size: 1.1rem;
+  max-width: 700px;
   margin: 0 auto;
 }
 
-.safety-guidelines-divider {
+.safety-guidelines .safety-guidelines-divider {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 1.5rem 0;
+  margin: 25px 0;
+  position: relative;
 }
 
-.safety-guidelines-divider-icon {
-  font-size: 2rem;
-  color: var(--color3);
+.safety-guidelines .safety-guidelines-divider:before,
+.safety-guidelines .safety-guidelines-divider:after {
+  content: "";
+  height: 2px;
+  width: 80px;
+  background: var(--color1);
+  display: block;
 }
 
-.safety-guidelines-column-header {
+.safety-guidelines .safety-guidelines-divider-icon {
+  margin: 0 15px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color1);
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Columns */
+.safety-guidelines .safety-guidelines-column {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.safety-guidelines .safety-guidelines-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.safety-guidelines .safety-guidelines-column-practices {
+  border-top: 5px solid var(--color2);
+}
+
+.safety-guidelines .safety-guidelines-column-warnings {
+  border-top: 5px solid var(--color1);
+}
+
+.safety-guidelines .safety-guidelines-column-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
-.safety-guidelines-column-title {
-  color: var(--color1);
+.safety-guidelines .safety-guidelines-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  font-size: 1.8rem;
+  color: white;
+  background-color: var(--color2);
+}
+
+.safety-guidelines .safety-guidelines-icon-wrapper-warning {
+  background-color: var(--color1);
+}
+
+.safety-guidelines .safety-guidelines-column-title {
+  font-size: 1.8rem;
   font-weight: 600;
-  margin-top: 1rem;
-}
-
-.safety-guidelines-column-subtitle {
+  margin-bottom: 10px;
   color: var(--color4);
-  opacity: 0.7;
 }
 
-.safety-guidelines-cards-container {
+.safety-guidelines .safety-guidelines-column-subtitle {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Cards Container */
+.safety-guidelines .safety-guidelines-cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.safety-guidelines-card {
+/* Cards */
+.safety-guidelines .safety-guidelines-card {
+  height: 200px;
   perspective: 1000px;
-  height: 300px; /* Increased uniform height */
+  cursor: pointer;
+  position: relative;
 }
 
-.safety-guidelines-card-inner {
+.safety-guidelines .safety-guidelines-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transform-style: preserve-3d;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: white;
 }
 
-.safety-guidelines-card-front,
-.safety-guidelines-card-back {
+.safety-guidelines .safety-guidelines-card-front,
+.safety-guidelines .safety-guidelines-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  padding: 1rem; /* Added padding to prevent text overflow */
-  overflow: hidden; /* Hide any overflowing content */
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.safety-guidelines-card-front {
-  background-color: var(--color2);
-  color: var(--color4);
-}
-.safety-guidelines-card.safety-guidelines-card-warning
-  .safety-guidelines-card-front {
-  background-color: #db2a1b;
-  color: white;
+.safety-guidelines .safety-guidelines-card-front {
+  background-color: #f9f9f9;
+  z-index: 2;
 }
 
-.safety-guidelines-card-back {
-  background-color: var(--color3);
-  color: white;
+.safety-guidelines .safety-guidelines-card-back {
+  background-color: #f0f0f0;
   transform: rotateY(180deg);
+  z-index: 1;
 }
 
-.safety-guidelines-card-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: var(--color1);
+/* Card Practice Styling */
+.safety-guidelines
+  .safety-guidelines-card-practice
+  .safety-guidelines-card-front {
+  background: linear-gradient(
+    135deg,
+    rgba(154, 205, 50, 0.1),
+    rgba(154, 205, 50, 0.2)
+  );
+  border: 1px solid rgba(154, 205, 50, 0.3);
 }
 
-.safety-guidelines-card-title {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.safety-guidelines
+  .safety-guidelines-card-practice
+  .safety-guidelines-card-back {
+  background: linear-gradient(
+    135deg,
+    rgba(154, 205, 50, 0.15),
+    rgba(154, 205, 50, 0.25)
+  );
+  border: 1px solid rgba(154, 205, 50, 0.3);
 }
 
-.safety-guidelines-card-text {
-  font-size: 0.9rem;
-  text-align: center;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4; /* Limit to 4 lines */
-  -webkit-box-orient: vertical;
+.safety-guidelines
+  .safety-guidelines-card-practice
+  .safety-guidelines-card-icon {
+  color: var(--color2);
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
-.safety-guidelines-cta {
-  background-color: var(--color2);
-  padding: 2rem;
-  border-radius: 15px;
+.safety-guidelines
+  .safety-guidelines-card-practice
+  .safety-guidelines-card-title {
   color: var(--color4);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
 }
 
-.safety-guidelines-btn {
-  background-color: var(--color1);
+/* Card Warning Styling */
+.safety-guidelines
+  .safety-guidelines-card-warning
+  .safety-guidelines-card-front {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 0, 0, 0.1),
+    rgba(139, 0, 0, 0.2)
+  );
+  border: 1px solid rgba(139, 0, 0, 0.3);
+}
+
+.safety-guidelines
+  .safety-guidelines-card-warning
+  .safety-guidelines-card-back {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 0, 0, 0.15),
+    rgba(139, 0, 0, 0.25)
+  );
+  border: 1px solid rgba(139, 0, 0, 0.3);
+}
+
+.safety-guidelines
+  .safety-guidelines-card-warning
+  .safety-guidelines-card-icon {
+  color: var(--color1);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.safety-guidelines
+  .safety-guidelines-card-warning
+  .safety-guidelines-card-title {
+  color: var(--color4);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Card Text Styling */
+.safety-guidelines .safety-guidelines-card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color4);
+  margin: 0;
+}
+
+/* CTA Section */
+.safety-guidelines .safety-guidelines-cta {
+  background: linear-gradient(135deg, var(--color1), var(--color3));
+  border-radius: 12px;
+  padding: 30px;
   color: white;
+  margin-top: 60px;
+}
+
+.safety-guidelines .safety-guidelines-cta h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.safety-guidelines .safety-guidelines-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+.safety-guidelines .safety-guidelines-btn {
+  background-color: white;
+  color: var(--color1);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
   transition: all 0.3s ease;
 }
 
-.safety-guidelines-btn:hover {
-  background-color: var(--color3);
-  color: white;
+.safety-guidelines .safety-guidelines-btn:hover {
+  background-color: var(--color2);
+  color: var(--color4);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Tablet Breakpoint */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .safety-guidelines-cards-container {
-    grid-template-columns: repeat(2, 1fr);
+  .safety-guidelines {
+    padding: 60px 0;
   }
 
-  .safety-guidelines .section-title {
-    font-size: 2rem;
+  .safety-guidelines .safety-guidelines-cards-container {
+    grid-template-columns: 1fr;
   }
 
-  .safety-guidelines-card {
-    height: 300px; /* Maintained uniform height */
+  .safety-guidelines .safety-guidelines-card {
+    height: 180px;
+  }
+
+  .safety-guidelines .safety-guidelines-column {
+    padding: 25px 20px;
+    margin-bottom: 30px;
+  }
+
+  .safety-guidelines .safety-guidelines-cta {
+    padding: 25px;
+  }
+
+  .safety-guidelines .safety-guidelines-cta h4 {
+    font-size: 1.5rem;
   }
 }
 
 /* Mobile Breakpoint */
 @media (min-width: 1px) and (max-width: 767.98px) {
   .safety-guidelines {
-    padding: 2rem 0;
+    padding: 40px 0;
   }
 
   .safety-guidelines .section-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
-  .safety-guidelines-cards-container {
+  .safety-guidelines .safety-guidelines-divider:before,
+  .safety-guidelines .safety-guidelines-divider:after {
+    width: 40px;
+  }
+
+  .safety-guidelines .safety-guidelines-column {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+  }
+
+  .safety-guidelines .safety-guidelines-cards-container {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
 
-  .safety-guidelines-card {
-    height: 300px; /* Maintained uniform height */
+  .safety-guidelines .safety-guidelines-card {
+    height: 170px;
   }
 
-  .safety-guidelines-column-header {
-    margin-bottom: 1.5rem;
+  .safety-guidelines .safety-guidelines-column-title {
+    font-size: 1.5rem;
   }
 
-  .safety-guidelines-cta {
+  .safety-guidelines .safety-guidelines-cta {
+    padding: 20px;
     text-align: center;
-    padding: 1.5rem;
+  }
+
+  .safety-guidelines .safety-guidelines-cta h4 {
+    font-size: 1.4rem;
+  }
+
+  .safety-guidelines .safety-guidelines-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 }
 /* contact page */
