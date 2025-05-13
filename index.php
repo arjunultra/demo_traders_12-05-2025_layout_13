@@ -154,7 +154,7 @@
 	</section>
 	<!-- index products swiper -->
 	<section class="products-section py-5">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row mb-4">
 				<div class="col-12 text-center">
 					<h2 class="products-section-title">Our Premium Fireworks</h2>
@@ -173,7 +173,7 @@
 								<div class="products-card">
 									<div class="products-card-image-container">
 										<img src="images/product-1.webp" alt="Firework Bombs"
-											class="products-card-image">
+											class="products-card-image img-fluid">
 									</div>
 									<div class="products-card-content">
 										<h3 class="products-card-title">Bombs</h3>
@@ -189,7 +189,7 @@
 								<div class="products-card">
 									<div class="products-card-image-container">
 										<img src="images/product-2.webp" alt="Ground Chakkars"
-											class="products-card-image">
+											class="products-card-image img-fluid">
 									</div>
 									<div class="products-card-content">
 										<h3 class="products-card-title">Ground Chakkars</h3>
@@ -204,7 +204,8 @@
 							<div class="swiper-slide products-swiper-slide">
 								<div class="products-card">
 									<div class="products-card-image-container">
-										<img src="images/product-3.webp" alt="Flowerpots" class="products-card-image">
+										<img src="images/product-3.webp" alt="Flowerpots"
+											class="img-fluid products-card-image">
 									</div>
 									<div class="products-card-content">
 										<h3 class="products-card-title">Flowerpots</h3>
@@ -219,7 +220,8 @@
 							<div class="swiper-slide products-swiper-slide">
 								<div class="products-card">
 									<div class="products-card-image-container">
-										<img src="images/product-4.webp" alt="Sparklers" class="products-card-image">
+										<img src="images/product-4.webp" alt="Sparklers"
+											class="products-card-image img-fluid">
 									</div>
 									<div class="products-card-content">
 										<h3 class="products-card-title">Sparklers</h3>
@@ -234,7 +236,8 @@
 							<div class="swiper-slide products-swiper-slide">
 								<div class="products-card">
 									<div class="products-card-image-container">
-										<img src="images/product-5.webp" alt="Rockets" class="products-card-image">
+										<img src="images/product-5.webp" alt="Rockets"
+											class="products-card-image img-fluid">
 									</div>
 									<div class="products-card-content">
 										<h3 class="products-card-title">Rockets</h3>
@@ -250,7 +253,7 @@
 								<div class="products-card">
 									<div class="products-card-image-container">
 										<img src="images/product-6.webp" alt="Kids Crackers"
-											class="products-card-image">
+											class="products-card-image img-fluid">
 									</div>
 									<div class="products-card-content">
 										<h3 class="products-card-title">Kids Crackers</h3>
@@ -268,6 +271,127 @@
 
 						<!-- Add Pagination -->
 						<div class="products-swiper-pagination swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Index GSAP parallax -->
+	<section class="fireworks-parallax">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="fireworks-parallax-heading">Lighting Up Celebrations Nationwide</h2>
+					<p class="fireworks-parallax-subtext">Experience the magic of premium fireworks with every
+						celebration.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- index brands  -->
+	<!-- Brands Section -->
+	<section class="brands-section py-5">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-12">
+					<h2 class="brands-section-title text-center">Our Featured Brands</h2>
+					<p class="brands-section-subtitle text-center">Discover premium fireworks from top manufacturers
+						around the world</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<div class="brands-swiper-container swiper">
+						<div class="swiper-wrapper">
+							<!-- Brand Slide 1 -->
+							<div class="swiper-slide brands-swiper-slide">
+								<div class="brands-card">
+									<div class="brands-image-container">
+										<img src="images/brand1.webp" alt="Black Cat Fireworks"
+											class="brands-image img-fluid">
+									</div>
+									<h3 class="brands-name">Black Cat</h3>
+								</div>
+							</div>
+
+							<!-- Brand Slide 2 -->
+							<div class="swiper-slide brands-swiper-slide">
+								<div class="brands-card">
+									<div class="brands-image-container">
+										<img src="images/brand2.webp" alt="Phantom Fireworks"
+											class="brands-image img-fluid">
+									</div>
+									<h3 class="brands-name">Phantom</h3>
+								</div>
+							</div>
+
+							<!-- Brand Slide 3 -->
+							<div class="swiper-slide brands-swiper-slide">
+								<div class="brands-card">
+									<div class="brands-image-container">
+										<img src="images/brand3.webp" alt="TNT Fireworks"
+											class="brands-image img-fluid">
+									</div>
+									<h3 class="brands-name">TNT</h3>
+								</div>
+							</div>
+
+							<!-- Brand Slide 4 -->
+							<div class="swiper-slide brands-swiper-slide">
+								<div class="brands-card">
+									<div class="brands-image-container">
+										<img src="images/brand4.webp" alt="Brothers Pyrotechnics"
+											class="brands-image img-fluid">
+									</div>
+									<h3 class="brands-name">Brothers</h3>
+								</div>
+							</div>
+
+							<!-- Brand Slide 5 -->
+							<div class="swiper-slide brands-swiper-slide">
+								<div class="brands-card">
+									<div class="brands-image-container">
+										<img src="images/brand5.webp" alt="Winda Fireworks"
+											class="brands-image img-fluid">
+									</div>
+									<h3 class="brands-name">Winda</h3>
+								</div>
+							</div>
+
+							<!-- Brand Slide 6 -->
+							<div class="swiper-slide brands-swiper-slide">
+								<div class="brands-card">
+									<div class="brands-image-container">
+										<img src="images/brand6.webp" alt="Shogun Fireworks"
+											class="brands-image img-fluid">
+									</div>
+									<h3 class="brands-name">Shogun</h3>
+								</div>
+							</div>
+
+							<!-- Brand Slide 7 -->
+							<div class="swiper-slide brands-swiper-slide">
+								<div class="brands-card">
+									<div class="brands-image-container">
+										<img src="images/brand7.webp" alt="Pyro King Fireworks"
+											class="brands-image img-fluid">
+									</div>
+									<h3 class="brands-name">Pyro King</h3>
+								</div>
+							</div>
+
+							<!-- Brand Slide 8 -->
+							<div class="swiper-slide brands-swiper-slide">
+								<div class="brands-card">
+									<div class="brands-image-container">
+										<img src="images/brand8.webp" alt="Golden Dragon Fireworks"
+											class="brands-image img-fluid">
+									</div>
+									<h3 class="brands-name">Golden Dragon</h3>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

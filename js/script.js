@@ -757,186 +757,426 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // index achievements counter
 document.addEventListener("DOMContentLoaded", () => {
-  // Function to check if an element is in the viewport
-  const isElementInViewport = (el) => {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  };
-
   function handleCounterAnimation() {
-    const achievementsSection = document.querySelector(".index-achievements");
-    const counters = document.querySelectorAll(".index-achievements .odometer");
-    const counterItems = document.querySelectorAll(
-      ".index-achievements-counter-box"
-    );
+      const achievementsSection = document.querySelector(".index-achievements");
+      const counters = document.querySelectorAll(".index-achievements .odometer");
 
-    if (!achievementsSection) return;
-
-    const animateCounters = () => {
-      if (
-        isElementInViewport(achievementsSection) &&
-        !achievementsSection.classList.contains("counted")
-      ) {
-        counters.forEach((counter) => {
-          const finalValue = counter.getAttribute("data-count");
-          counter.innerHTML = finalValue;
-        });
-        achievementsSection.classList.add("counted");
-        window.removeEventListener("scroll", animateCounters); // Remove event listener after animation
+      if (!achievementsSection || !gsap || !ScrollTrigger) {
+          console.error("GSAP or ScrollTrigger not found. Ensure they are included via CDN.");
+          return;
       }
-    };
 
-    // Initial call and event listener
-    animateCounters();
-    window.addEventListener("scroll", animateCounters);
+      gsap.registerPlugin(ScrollTrigger);
 
-    // Hover effect
-    counterItems.forEach((item) => {
-      const icon = item.querySelector(".index-achievements-icon");
-      item.addEventListener("mouseenter", () => {
-        icon.classList.add("icon-hover");
+      const animateCounters = () => {
+          if (!achievementsSection.classList.contains("counted")) {
+              counters.forEach((counter) => {
+                  const finalValue = counter.getAttribute("data-count");
+                  counter.innerText = finalValue;
+              });
+              achievementsSection.classList.add("counted");
+          }
+      };
+
+      ScrollTrigger.create({
+          trigger: achievementsSection,
+          start: "top 80%", // Adjust start position as needed
+          end: "bottom 20%", // Adjust end position as needed
+          once: true, // Only trigger once
+          // markers: true,
+          onEnter: () => {
+              animateCounters();
+          },
       });
-      item.addEventListener("mouseleave", () => {
-        icon.classList.remove("icon-hover");
+
+      // Hover effect
+      const counterItems = document.querySelectorAll(".index-achievements-counter-box");
+      counterItems.forEach((item) => {
+          const icon = item.querySelector(".index-achievements-icon");
+          item.addEventListener("mouseenter", () => {
+              icon.classList.add("icon-hover");
+          });
+          item.addEventListener("mouseleave", () => {
+              icon.classList.remove("icon-hover");
+          });
       });
-    });
   }
 
   handleCounterAnimation();
 });
 // products swiper init
-document.addEventListener("DOMContentLoaded", function () {
-  const productsSwiper = new Swiper(".products-swiper-container", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".products-swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".products-swiper-button-next",
-      prevEl: ".products-swiper-button-prev",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      992: {
-        slidesPerView: 3,
+gsap.registerPlugin(SplitText);
+
+let activeSplitTexts = new Map(); // Store SplitText instances for active slides
+
+document.addEventListener('DOMContentLoaded', function () {
+    const productsSwiper = new Swiper('.products-swiper-container', {
+        slidesPerView: 1,
         spaceBetween: 30,
-      },
-    },
-    on: {
-      init: function () {
-        initProductsAnimations(this); // Pass the swiper instance
-        highlightActiveSlide(this); // Pass the swiper instance
-      },
-      slideChangeTransitionEnd: function () {
-        // Use this event for smoother transitions
-        highlightActiveSlide(this); // Pass the swiper instance
-      },
-    },
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.products-swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.products-swiper-button-next',
+            prevEl: '.products-swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 35
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 42
+            }
+        },
+        on: {
+            init: function () {
+                initProductsAnimations(this);
+                highlightActiveSlides(this); // Renamed to plural
+            },
+            slideChangeTransitionEnd: function () {
+                highlightActiveSlides(this); // Renamed to plural
+            }
+        }
+    });
+
+    function initProductsAnimations(swiperInstance) {
+        const slides = swiperInstance.slides;
+
+        slides.forEach(slide => {
+            const card = slide.querySelector('.products-card');
+            const image = slide.querySelector('.products-card-image');
+
+            // Subtle floating animation for all cards
+            gsap.to(card, {
+                y: -5,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut",
+                overwrite: true
+            });
+
+            // Subtle zoom animation for all images
+            gsap.to(image, {
+                scale: 1.03,
+                duration: 2.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut",
+                overwrite: true
+            });
+        });
+    }
+
+    function highlightActiveSlides(swiperInstance) {
+        const activeSlides = swiperInstance.slides.filter(slide => slide.classList.contains('swiper-slide-active') || swiperInstance.params.slidesPerView > 1 && slide.classList.contains('swiper-slide-visible'));
+
+        // Reset styles for all slides
+        gsap.to('.products-swiper-slide .products-card', {
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+            borderColor: "transparent",
+            borderWidth: 0,
+            filter: "none",
+            duration: 0.3,
+            overwrite: true
+        });
+        gsap.to('.products-swiper-slide .products-card-title', {
+            color: "var(--color1)",
+            fontWeight: 600,
+            y: 0,
+            opacity: 1,
+            duration: 0.3,
+            overwrite: true
+        });
+        gsap.to('.products-swiper-slide .products-card-description', {
+            opacity: 1,
+            y: 0,
+            duration: 0.3,
+            overwrite: true
+        });
+        gsap.to('.products-swiper-slide .products-card-button', {
+            opacity: 1,
+            y: 0,
+            duration: 0.3,
+            overwrite: true
+        });
+
+        activeSlides.forEach(slide => {
+            const card = slide.querySelector('.products-card');
+            const title = slide.querySelector('.products-card-title');
+            const description = slide.querySelector('.products-card-description');
+            const button = slide.querySelector('.products-card-button');
+
+            // Apply active styling
+            gsap.to(card, {
+                boxShadow: "0 15px 30px rgba(139, 0, 0, 0.25)",
+                borderColor: "rgba(139, 0, 0, 0.15)",
+                borderWidth: 1,
+                borderStyle: "solid",
+                filter: "drop-shadow(0 0 8px rgba(139, 0, 0, 0.3))",
+                duration: 0.4,
+                ease: "power2.out",
+                overwrite: true
+            });
+
+            // Animate in text and button using SplitText (if not already animated)
+            if (title && !activeSplitTexts.has(title)) {
+                const splitTitle = new SplitText(title, { type: "words,chars" });
+                gsap.from(splitTitle.chars, {
+                    opacity: 0,
+                    y: 20,
+                    stagger: 0.03,
+                    duration: 0.6,
+                    ease: "power3.out",
+                    overwrite: true,
+                    onComplete: () => activeSplitTexts.set(title, splitTitle) // Store SplitText instance
+                });
+            } else if (title && activeSplitTexts.has(title)) {
+                // Ensure it's visible if it was previously animated out
+                gsap.to(title, { opacity: 1, y: 0, duration: 0.3, overwrite: true });
+            }
+
+            gsap.fromTo(description, { opacity: 0, y: 15 }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+                delay: 0.2,
+                ease: "power2.out",
+                overwrite: true
+            });
+
+            gsap.fromTo(button, { opacity: 0, y: 10 }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.4,
+                delay: 0.3,
+                ease: "power2.out",
+                overwrite: true
+            });
+        });
+
+        // Animate out the content of the slides that are no longer active/visible
+        swiperInstance.slides.forEach(slide => {
+            if (!activeSlides.includes(slide)) {
+                const card = slide.querySelector('.products-card');
+                const title = slide.querySelector('.products-card-title');
+                const description = slide.querySelector('.products-card-description');
+                const button = slide.querySelector('.products-card-button');
+
+                gsap.to(card, {
+                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                    borderColor: "transparent",
+                    borderWidth: 0,
+                    filter: "none",
+                    duration: 0.3,
+                    overwrite: true
+                });
+                gsap.to(title, { opacity: 0.6, y: -10, duration: 0.3, overwrite: true });
+                gsap.to(description, { opacity: 0.6, y: -5, duration: 0.3, overwrite: true });
+                gsap.to(button, { opacity: 0.6, y: -5, duration: 0.3, overwrite: true });
+
+                // Revert SplitText if it was active on this title
+                if (title && activeSplitTexts.has(title)) {
+                    activeSplitTexts.get(title).revert();
+                    activeSplitTexts.delete(title);
+                }
+            }
+        });
+    }
+});
+// parallax GSAP animation
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('DOMContentLoaded event fired.');
+
+  // Register GSAP Plugins
+  gsap.registerPlugin(ScrollTrigger);
+  console.log('GSAP and ScrollTrigger registered successfully.');
+
+  // Parallax Effect
+  console.log('Initializing parallax animation.');
+  gsap.to('.fireworks-parallax', {
+    backgroundPosition: '50% 20%',
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.fireworks-parallax',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+      onEnter: () => console.log('Parallax animation started.'),
+      onLeave: () => console.log('Parallax animation ended.')
+    }
   });
 
-  function initProductsAnimations(swiperInstance) {
-    const slides = swiperInstance.slides;
+  // SplitText Animation
+  console.log('Initializing SplitText animations.');
+  const headingText = new SplitText('.fireworks-parallax-heading', { type: 'words, chars' });
+  const subText = new SplitText('.fireworks-parallax-subtext', { type: 'words, chars' });
+  console.log('SplitText applied:', headingText, subText);
 
-    slides.forEach((slide) => {
-      const card = slide.querySelector(".products-card");
-      const image = slide.querySelector(".products-card-image");
+  gsap.from(headingText.chars, {
+    opacity: 0,
+    y: 50,
+    stagger: 0.05,
+    duration: 0.6,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.fireworks-parallax',
+      start: 'top 80%',
+      toggleActions: 'play reset play reset',
+      onEnter: () => console.log('Heading text animation triggered.')
+    }
+  });
 
-      // Unified animation for all cards - subtle lift and image zoom
-      gsap.fromTo(
-        card,
-        { y: 0, scale: 1 },
-        {
-          // Start at original position and scale
-          y: -5,
-          scale: 1.02,
-          duration: 2,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          overwrite: true, // Important to prevent conflicts
-        }
-      );
+  gsap.from(subText.words, {
+    opacity: 0,
+    y: 20,
+    stagger: 0.08,
+    duration: 0.5,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.fireworks-parallax',
+      start: 'top 80%',
+      toggleActions: 'play reset play reset',
+      onEnter: () => console.log('Subtext animation triggered.')
+    }
+  });
 
-      gsap.fromTo(
-        image,
-        { scale: 1 },
-        {
-          // Start at original scale
-          scale: 1.05,
-          duration: 2.5,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          overwrite: true, // Important to prevent conflicts
-        }
-      );
-    });
+  console.log('Animations initialized. Waiting for scroll events.');
+});
+// index brands 
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Brands section script initialized');
+  gsap.registerPlugin(ScrollTrigger);
+
+  const swiperContainer = document.querySelector('.brands-swiper-container');
+  if (!swiperContainer) {
+      console.error('Swiper container not found');
+      return;
   }
+  console.log('Swiper container found:', swiperContainer);
 
-  function highlightActiveSlide(swiperInstance) {
-    // Kill any existing highlighting animations
-    gsap.killTweensOf(".products-swiper-slide .products-card");
-    gsap.killTweensOf(".products-swiper-slide .products-card-title");
-
-    // Reset all cards to their base state using GSAP for smoother transitions
-    gsap.to(".products-swiper-slide .products-card", {
-      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-      borderColor: "transparent",
-      borderWidth: 0,
-      filter: "none",
-      duration: 0.3, // Add a small duration for smoother reset
-      overwrite: true,
-    });
-    gsap.to(".products-swiper-slide .products-card-title", {
-      color: "var(--color1)",
-      fontWeight: 600,
-      duration: 0.3, // Add a small duration for smoother reset
-      overwrite: true,
-    });
-
-    // Get the active slides
-    const activeSlides = swiperInstance.slides.filter((slide) =>
-      slide.classList.contains("swiper-slide-active")
-    );
-
-    // Apply special effect to active slides with GSAP
-    activeSlides.forEach((slide) => {
-      const card = slide.querySelector(".products-card");
-      const title = slide.querySelector(".products-card-title");
-
-      gsap.to(card, {
-        boxShadow: "0 15px 30px rgba(139, 0, 0, 0.25)",
-        borderColor: "rgba(139, 0, 0, 0.15)",
-        borderWidth: 1,
-        borderStyle: "solid",
-        filter: "drop-shadow(0 0 8px rgba(139, 0, 0, 0.3))",
-        duration: 0.4,
-        ease: "power2.out",
-        overwrite: true,
+  try {
+      const brandsSwiper = new Swiper('.brands-swiper-container', {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          speed: 800,
+          grabCursor: true,
+          loop: true,
+          autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+          },
+          breakpoints: {
+              768: {
+                  slidesPerView: 2,
+                  spaceBetween: 30
+              },
+              992: {
+                  slidesPerView: 4,
+                  spaceBetween: 30
+              }
+          },
+          on: {
+              slideChangeTransitionEnd: function () {
+                  animateCurrentSlide(this.el.querySelector('.swiper-slide-active'));
+              }
+          }
       });
 
-      gsap.to(title, {
-        color: "#8b0000",
-        fontWeight: 700,
-        duration: 0.3,
-        overwrite: true,
-      });
-    });
+      function animateCurrentSlide(slide) {
+          if (slide) {
+              const brandCards = slide.querySelectorAll('.brands-card');
+
+              brandCards.forEach((card, index) => {
+                  const brandNameElement = card.querySelector('.brands-name');
+                  const splitText = new SplitText(brandNameElement, { type: "chars" });
+                  const chars = splitText.chars;
+
+                  // Set initial state for the card and characters
+                  gsap.set(card, { rotationY: 90, opacity: 0, transformStyle: "preserve-3d" });
+                  gsap.set(chars, { opacity: 0, y: 10 });
+
+                  const cardTimeline = gsap.timeline({ overwrite: true });
+
+                  // Card flip animation
+                  cardTimeline.to(card, {
+                      rotationY: 0,
+                      opacity: 1,
+                      duration: 0.6,
+                      ease: 'power3.out'
+                  }).add(() => {
+                      // Text reveal animation after the card starts flipping in
+                      gsap.to(chars, {
+                          opacity: 1,
+                          y: 0,
+                          duration: 0.3,
+                          stagger: 0.03,
+                          ease: 'power2.out'
+                      });
+                  }, "-=0.3"); // Start text animation slightly before the card flip ends
+              });
+          }
+      }
+
+      // Initial animation of the first active slide on load
+      animateCurrentSlide(swiperContainer.querySelector('.swiper-slide-active'));
+
+      console.log('Swiper initialization complete');
+
+  } catch(error) {
+      console.error('Swiper initialization error:', error);
   }
+});
+
+// reusable function to mimic aos
+document.addEventListener('DOMContentLoaded', function() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  function animateSectionOnScroll(triggerElement, targetElements, animationProperties, startPosition = "top 80%", endPosition = "bottom 20%", staggerValue = 0.1, easeValue = "power2.out", durationValue = 0.6) {
+      gsap.fromTo(targetElements,
+          { ...animationProperties.from },
+          {
+              ...animationProperties.to,
+              duration: durationValue,
+              stagger: staggerValue,
+              ease: easeValue,
+              overwrite: true,
+              scrollTrigger: {
+                  trigger: triggerElement,
+                  start: startPosition,
+                  end: endPosition,
+                  // markers: true, // Keep for debugging
+                  scrub: false, // Consider adding scrub for a different effect
+                  toggleActions: 'play none none reverse' // Define what happens on enter, leave, enterBack, leaveBack
+              }
+          }
+      );
+  }
+
+  const welcomeSection = document.querySelector('.welcome-section');
+  const welcomeHeading = document.querySelector('.welcome-heading');
+  const welcomeSubheading = document.querySelector('.welcome-subheading');
+  const welcomeText = document.querySelector('.welcome-text');
+  const welcomeCta = document.querySelector('.welcome-cta');
+  const welcomeFeatures = document.querySelectorAll('.welcome-feature-item');
+  const welcomeImage = document.querySelector('.welcome-image');
+
+  const slideFadeIn = { from: { y: 40, opacity: 0 }, to: { y: 0, opacity: 1 } };
+  const slideInLeft = { from: { x: -50, opacity: 0 }, to: { x: 0, opacity: 1 } };
+  const slideInRight = { from: { x: 50, opacity: 0 }, to: { x: 0, opacity: 1 } };
+  const scaleUpFadeIn = { from: { scale: 0.9, opacity: 0 }, to: { scale: 1, opacity: 1 } };
+
+  animateSectionOnScroll(welcomeSection, [welcomeHeading, welcomeSubheading], slideFadeIn, "top 70%");
+  animateSectionOnScroll(welcomeSection, welcomeText, slideFadeIn, "top 60%", "+=100");
+  animateSectionOnScroll(welcomeSection, welcomeCta, scaleUpFadeIn, "top 50%", "+=50");
+  animateSectionOnScroll(welcomeSection, welcomeFeatures, slideInLeft, "top 40%", "+=150", 0.2);
+  animateSectionOnScroll(welcomeSection, welcomeImage, slideInRight, "top 50%");
 });
