@@ -384,9 +384,6 @@ section.home-carousel .swiper-slide img {
   perspective: 1000px;
   height: 300px; /* Increased uniform height */
 }
-/* .safety-guidelines-card.safety-guidelines-card-warning {
-  background-color: #db2a1b;
-} */
 
 .safety-guidelines-card-inner {
   position: relative;
@@ -515,7 +512,501 @@ section.home-carousel .swiper-slide img {
     padding: 1.5rem;
   }
 }
+/* contact page */
+/* Fireworks Contact Section Styles */
+.fireworks-contact {
+  background-color: var(--color5);
+  position: relative;
+  overflow: hidden;
+}
 
+.fireworks-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-34-74c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM64 41c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm-17 13c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z' fill='%238b0000' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Header Section */
+.fireworks-contact-header {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.fireworks-contact-badge {
+  background-color: var(--color1);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.fireworks-contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color4);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.fireworks-contact-highlight {
+  color: var(--color1);
+  position: relative;
+  display: inline-block;
+}
+
+.fireworks-contact-highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(139, 0, 0, 0.1);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.fireworks-contact-title:hover .fireworks-contact-highlight::after {
+  transform: scaleX(1);
+}
+
+.fireworks-contact-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* Contact Cards */
+.fireworks-contact-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fireworks-contact-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--color1), var(--color3));
+  z-index: 2;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.fireworks-contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.fireworks-contact-card:hover::before {
+  transform: scaleX(1);
+}
+
+.fireworks-contact-card-icon {
+  background-color: rgba(139, 0, 0, 0.1);
+  color: var(--color1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.fireworks-contact-card:hover .fireworks-contact-card-icon {
+  background-color: var(--color1);
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.fireworks-contact-card-content {
+  flex: 1;
+}
+
+.fireworks-contact-card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color4);
+  margin-bottom: 1.25rem;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.fireworks-contact-card-text {
+  color: #666;
+  line-height: 1.7;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.fireworks-contact-card-text strong {
+  color: var(--color4);
+  font-weight: 600;
+}
+
+.fireworks-contact-link {
+  display: inline-block;
+  color: var(--color1);
+  margin-top: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+
+.fireworks-contact-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color1);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.fireworks-contact-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.fireworks-contact-link i {
+  transition: transform 0.3s ease;
+}
+
+.fireworks-contact-link:hover i {
+  transform: translateX(5px);
+}
+
+/* Phone List Styles */
+.fireworks-contact-phone-list {
+  margin-bottom: 0;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.fireworks-contact-phone-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.fireworks-contact-phone-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.fireworks-contact-phone-item span {
+  color: #666;
+  font-weight: 500;
+}
+
+.fireworks-contact-phone-item a {
+  color: var(--color1);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.fireworks-contact-phone-item a:hover {
+  color: var(--color3);
+  transform: scale(1.05);
+}
+
+/* Email List Styles */
+.fireworks-contact-email-list {
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.fireworks-contact-email-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.fireworks-contact-email-item span {
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.fireworks-contact-email-item a {
+  color: var(--color1);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.fireworks-contact-email-item a:hover {
+  color: var(--color3);
+}
+
+.fireworks-contact-response-note {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.fireworks-contact-response-note i {
+  margin-right: 0.5rem;
+}
+
+/* Store Hours Styles */
+.fireworks-contact-hours-list {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.fireworks-contact-hours-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.fireworks-contact-hours-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.fireworks-contact-hours-item.special {
+  background-color: rgba(139, 0, 0, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.fireworks-contact-day {
+  color: #666;
+  font-weight: 500;
+}
+
+.fireworks-contact-time {
+  color: var(--color4);
+  font-weight: 600;
+}
+
+.fireworks-contact-festive-note {
+  font-size: 0.9rem;
+  color: var(--color1);
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.fireworks-contact-festive-note i {
+  margin-right: 0.5rem;
+  color: var(--color2);
+}
+
+/* Map Styles */
+.fireworks-contact-map-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fireworks-contact-map {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.fireworks-contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+.fireworks-contact-directions-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color1);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(139, 0, 0, 0.2);
+}
+
+.fireworks-contact-directions-btn i {
+  margin-right: 0.5rem;
+}
+
+.fireworks-contact-directions-btn:hover {
+  background-color: var(--color3);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(75, 0, 130, 0.3);
+}
+
+/* Media Queries for Tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fireworks-contact-title {
+    font-size: 2.2rem;
+  }
+
+  .fireworks-contact-card {
+    padding: 1.5rem;
+  }
+
+  .fireworks-contact-card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .fireworks-contact-card-title {
+    font-size: 1.2rem;
+  }
+
+  .fireworks-contact-phone-item,
+  .fireworks-contact-email-item,
+  .fireworks-contact-hours-item {
+    flex-direction: column;
+  }
+
+  .fireworks-contact-phone-item span,
+  .fireworks-contact-email-item span {
+    margin-bottom: 0.25rem;
+  }
+
+  .fireworks-contact-directions-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Media Queries for Mobile */
+@media (min-width: 1px) and (max-width: 767.98px) {
+  .fireworks-contact-title {
+    font-size: 1.8rem;
+  }
+
+  .fireworks-contact-subtitle {
+    font-size: 1rem;
+  }
+
+  .fireworks-contact-badge {
+    font-size: 0.7rem;
+  }
+
+  .fireworks-contact-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .fireworks-contact-card-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .fireworks-contact-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .fireworks-contact-phone-item,
+  .fireworks-contact-email-item,
+  .fireworks-contact-hours-item {
+    flex-direction: column;
+  }
+
+  .fireworks-contact-phone-item a,
+  .fireworks-contact-email-item a {
+    font-size: 0.9rem;
+  }
+
+  .fireworks-contact-phone-item span,
+  .fireworks-contact-email-item span,
+  .fireworks-contact-day {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .fireworks-contact-time {
+    font-size: 0.9rem;
+  }
+
+  .fireworks-contact-map-wrapper {
+    margin-top: 1rem;
+  }
+
+  .fireworks-contact-map {
+    height: 250px;
+  }
+
+  .fireworks-contact-directions-btn {
+    bottom: 15px;
+    right: 15px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
 /* Footer Styles */
 .fireworks-footer {
   background-color: var(--color4);

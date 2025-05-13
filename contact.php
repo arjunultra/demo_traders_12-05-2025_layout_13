@@ -118,11 +118,11 @@
                             <div class="fireworks-contact-email-list">
                                 <div class="fireworks-contact-email-item">
                                     <span>General Inquiries:</span>
-                                    <a href="mailto:hello@sparklefireworks.com">hello@sparklefireworks.com</a>
+                                    <a href="mailto:hello@sparklefireworks.com">hello@demotraders.com</a>
                                 </div>
                                 <div class="fireworks-contact-email-item">
                                     <span>Wholesale Inquiries:</span>
-                                    <a href="mailto:wholesale@sparklefireworks.com">wholesale@sparklefireworks.com</a>
+                                    <a href="mailto:wholesale@sparklefireworks.com">contact@demotraders.com</a>
                                 </div>
                             </div>
                             <p class="fireworks-contact-response-note">
