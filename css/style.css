@@ -306,61 +306,6 @@ section.home-carousel .swiper-slide img {
   color: var(--color4); /* Almost Black */
   font-size: 16px;
 }
-
-/* Tablet Breakpoint (md screens) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .welcome-section .welcome-heading {
-    font-size: 36px;
-  }
-
-  .welcome-section .welcome-subheading {
-    font-size: 20px;
-  }
-
-  .welcome-section .welcome-image {
-    margin-top: 30px;
-  }
-
-  .welcome-section .welcome-features {
-    margin-top: 30px;
-  }
-}
-
-/* Mobile Breakpoint (sm screens) */
-@media (min-width: 1px) and (max-width: 767.98px) {
-  .welcome-section {
-    padding: 40px 0;
-  }
-
-  .welcome-section .welcome-heading {
-    font-size: 32px;
-    text-align: center;
-  }
-
-  .welcome-section .welcome-subheading {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .welcome-section .welcome-text {
-    text-align: center;
-  }
-
-  .welcome-section .welcome-image {
-    margin: 30px auto;
-    max-width: 90%;
-  }
-
-  .welcome-section .welcome-cta {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .welcome-section .welcome-features {
-    margin-top: 30px;
-  }
-}
 /* Index Achievements Section Styles */
 .index-achievements {
   background-image: url("../images/index-achievements-bg.webp");
@@ -474,84 +419,6 @@ section.home-carousel .swiper-slide img {
   font-weight: 500;
   margin: 0;
 }
-
-/* Tablet Breakpoint (md screens) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .index-achievements {
-    padding: 80px 0;
-  }
-
-  .index-achievements .index-achievements-heading {
-    font-size: 36px;
-  }
-
-  .index-achievements .index-achievements-subtext {
-    font-size: 16px;
-    margin-bottom: 40px;
-  }
-
-  .index-achievements .index-achievements-counter-box {
-    height: 220px;
-    padding: 25px 10px;
-  }
-
-  .index-achievements .index-achievements-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-  }
-
-  .index-achievements .index-achievements-number {
-    font-size: 38px;
-  }
-
-  .index-achievements .index-achievements-suffix {
-    font-size: 28px;
-  }
-
-  .index-achievements .index-achievements-title {
-    font-size: 16px;
-  }
-}
-
-/* Mobile Breakpoint (sm screens) */
-@media (min-width: 1px) and (max-width: 767.98px) {
-  .index-achievements {
-    padding: 60px 0;
-  }
-
-  .index-achievements .index-achievements-heading {
-    font-size: 30px;
-  }
-
-  .index-achievements .index-achievements-subtext {
-    font-size: 15px;
-    margin-bottom: 30px;
-  }
-
-  .index-achievements .index-achievements-counter-box {
-    height: 200px;
-    margin-bottom: 20px;
-    padding: 20px 10px;
-  }
-
-  .index-achievements .index-achievements-icon {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-
-  .index-achievements .index-achievements-number {
-    font-size: 34px;
-  }
-
-  .index-achievements .index-achievements-suffix {
-    font-size: 24px;
-  }
-
-  .index-achievements .index-achievements-title {
-    font-size: 15px;
-  }
-}
-
 /* index products-section */
 /* Products Section Styles */
 .products-section {
@@ -694,90 +561,6 @@ section.home-carousel .swiper-slide img {
   opacity: 1;
   transform: scale(1.2);
 }
-
-/* Tablet (md screens) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .products-section-title {
-    font-size: 2.2rem;
-  }
-
-  .products-section-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .products-card-image-container {
-    height: 180px;
-  }
-
-  .products-card-content {
-    padding: 1.25rem;
-  }
-
-  .products-card-title {
-    font-size: 1.35rem;
-  }
-
-  .products-card-description {
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-  }
-
-  .products-card-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.95rem;
-  }
-
-  .products-swiper-container {
-    padding: 15px 35px;
-  }
-}
-
-/* Mobile (sm screens) */
-@media (min-width: 1px) and (max-width: 767.98px) {
-  .products-section-title {
-    font-size: 2rem;
-  }
-
-  .products-section-subtitle {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .products-card-image-container {
-    height: 160px;
-  }
-
-  .products-card-content {
-    padding: 1rem;
-  }
-
-  .products-card-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .products-card-description {
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .products-card-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .products-swiper-container {
-    padding: 10px 30px;
-  }
-
-  .products-swiper-button-next,
-  .products-swiper-button-prev {
-    display: none;
-  }
-}
-/* fireworks parallax section */
 /* Fireworks Parallax Section Styles */
 .fireworks-parallax {
   background-image: url("../images/index-parallax-bg.webp");
@@ -821,35 +604,6 @@ section.home-carousel .swiper-slide img {
   font-size: 20px;
   max-width: 600px;
   margin: 0 auto;
-}
-
-/* Responsive Breakpoints */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .fireworks-parallax {
-    height: 400px;
-  }
-
-  .fireworks-parallax-heading {
-    font-size: 36px;
-  }
-
-  .fireworks-parallax-subtext {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 1px) and (max-width: 767.98px) {
-  .fireworks-parallax {
-    height: 300px;
-  }
-
-  .fireworks-parallax-heading {
-    font-size: 28px;
-  }
-
-  .fireworks-parallax-subtext {
-    font-size: 16px;
-  }
 }
 /* index brands section */
 .brands-section .brands-swiper-slide {
@@ -917,54 +671,6 @@ section.home-carousel .swiper-slide img {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 0;
-}
-
-/* Tablet styles */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .brands-section .brands-section-title {
-    font-size: 28px;
-  }
-
-  .brands-section .brands-section-subtitle {
-    font-size: 16px;
-  }
-
-  .brands-section .brands-name {
-    font-size: 16px;
-  }
-
-  .brands-section .brands-card {
-    padding: 15px;
-  }
-}
-
-/* Mobile styles */
-@media (min-width: 1px) and (max-width: 767.98px) {
-  .brands-section {
-    padding: 40px 0;
-  }
-
-  .brands-section .brands-section-title {
-    font-size: 24px;
-  }
-
-  .brands-section .brands-section-subtitle {
-    font-size: 15px;
-    margin-bottom: 20px;
-  }
-
-  .brands-section .brands-name {
-    font-size: 15px;
-  }
-
-  .brands-section .brands-card {
-    padding: 12px;
-  }
-
-  .brands-section .brands-image-container {
-    height: 110px;
-    margin-bottom: 15px;
-  }
 }
 /* index page ends */
 /* about page starts */
@@ -2737,6 +2443,156 @@ section.home-carousel .swiper-slide img {
 /*************************************************************************** media query starts ****************************************************************/
 /* mobile media query */
 @media (min-width: 1px) and (max-width: 767.98px) {
+  /* index brands */
+  .brands-section {
+    padding: 40px 0;
+  }
+
+  .brands-section .brands-section-title {
+    font-size: 24px;
+  }
+
+  .brands-section .brands-section-subtitle {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .brands-section .brands-name {
+    font-size: 15px;
+  }
+
+  .brands-section .brands-card {
+    padding: 12px;
+  }
+
+  .brands-section .brands-image-container {
+    height: 110px;
+    margin-bottom: 15px;
+  }
+  /* index parallax */
+  .fireworks-parallax {
+    height: 300px;
+  }
+
+  .fireworks-parallax-heading {
+    font-size: 28px;
+  }
+
+  .fireworks-parallax-subtext {
+    font-size: 16px;
+  }
+  /* index products */
+  .products-section-title {
+    font-size: 2rem;
+  }
+
+  .products-section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .products-card-image-container {
+    height: 160px;
+  }
+
+  .products-card-content {
+    padding: 1rem;
+  }
+
+  .products-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .products-card-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .products-card-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .products-swiper-container {
+    padding: 10px 30px;
+  }
+
+  .products-swiper-button-next,
+  .products-swiper-button-prev {
+    display: none;
+  }
+  /* index achievements */
+  .index-achievements {
+    padding: 60px 0;
+  }
+
+  .index-achievements .index-achievements-heading {
+    font-size: 30px;
+  }
+
+  .index-achievements .index-achievements-subtext {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .index-achievements .index-achievements-counter-box {
+    height: 200px;
+    margin-bottom: 20px;
+    padding: 20px 10px;
+  }
+
+  .index-achievements .index-achievements-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .index-achievements .index-achievements-number {
+    font-size: 34px;
+  }
+
+  .index-achievements .index-achievements-suffix {
+    font-size: 24px;
+  }
+
+  .index-achievements .index-achievements-title {
+    font-size: 15px;
+  }
+  /* index welcome section */
+  .welcome-section {
+    padding: 40px 0;
+  }
+
+  .welcome-section .welcome-heading {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .welcome-section .welcome-subheading {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .welcome-section .welcome-text {
+    text-align: center;
+  }
+
+  .welcome-section .welcome-image {
+    margin: 30px auto;
+    max-width: 90%;
+  }
+
+  .welcome-section .welcome-cta {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .welcome-section .welcome-features {
+    margin-top: 30px;
+  }
   /* header */
   header .section-contact-bar .contact-info {
     justify-content: center;
@@ -2788,6 +2644,119 @@ section.home-carousel .swiper-slide img {
 }
 /* tablet media query */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  /* index brands */
+  .brands-section .brands-section-title {
+    font-size: 28px;
+  }
+
+  .brands-section .brands-section-subtitle {
+    font-size: 16px;
+  }
+
+  .brands-section .brands-name {
+    font-size: 16px;
+  }
+
+  .brands-section .brands-card {
+    padding: 15px;
+  }
+  /* index parallax */
+  .fireworks-parallax {
+    height: 400px;
+  }
+
+  .fireworks-parallax-heading {
+    font-size: 36px;
+  }
+
+  .fireworks-parallax-subtext {
+    font-size: 18px;
+  }
+  /* index products */
+  .products-section-title {
+    font-size: 2.2rem;
+  }
+
+  .products-section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .products-card-image-container {
+    height: 180px;
+  }
+
+  .products-card-content {
+    padding: 1.25rem;
+  }
+
+  .products-card-title {
+    font-size: 1.35rem;
+  }
+
+  .products-card-description {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .products-card-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .products-swiper-container {
+    padding: 15px 35px;
+  }
+  /* index achievements section */
+  .index-achievements {
+    padding: 80px 0;
+  }
+
+  .index-achievements .index-achievements-heading {
+    font-size: 36px;
+  }
+
+  .index-achievements .index-achievements-subtext {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .index-achievements .index-achievements-counter-box {
+    height: 220px;
+    padding: 25px 10px;
+  }
+
+  .index-achievements .index-achievements-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+
+  .index-achievements .index-achievements-number {
+    font-size: 38px;
+  }
+
+  .index-achievements .index-achievements-suffix {
+    font-size: 28px;
+  }
+
+  .index-achievements .index-achievements-title {
+    font-size: 16px;
+  }
+  /* index welcome section */
+  .welcome-section .welcome-heading {
+    font-size: 36px;
+  }
+
+  .welcome-section .welcome-subheading {
+    font-size: 20px;
+  }
+
+  .welcome-section .welcome-image {
+    margin-top: 30px;
+  }
+
+  .welcome-section .welcome-features {
+    margin-top: 30px;
+  }
   /* header */
   header .section-contact-bar .contact-info {
     justify-content: center;
