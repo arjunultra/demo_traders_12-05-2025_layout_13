@@ -199,99 +199,6 @@ header .section-main-nav .navbar-toggler .bi-list {
   font-size: 2rem;
   color: var(--color1);
 }
-
-/* Tablet Breakpoint (MD screens) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  header .section-contact-bar .contact-info {
-    justify-content: center;
-    margin-bottom: 5px;
-  }
-
-  header .section-main-nav .logo-container {
-    position: relative;
-    left: 0;
-    transform: none;
-    top: 0;
-    margin-right: 15px;
-  }
-
-  header .section-main-nav .logo-background {
-    width: 110px;
-    height: 85px;
-  }
-
-  header .section-main-nav .logo-img {
-    max-width: 80px;
-    max-height: 60px;
-  }
-
-  header .section-main-nav .navbar-nav {
-    margin-left: 0;
-    margin-top: 15px;
-  }
-
-  header .section-main-nav .nav-link {
-    padding: 10px 15px;
-  }
-
-  header .section-main-nav .nav-link.active:after {
-    bottom: 5px;
-  }
-
-  header .section-main-nav .btn-price-list {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: inline-block;
-  }
-}
-
-/* Mobile Breakpoint (SM and XS screens) */
-@media (min-width: 1px) and (max-width: 767.98px) {
-  header .section-contact-bar .contact-info {
-    justify-content: center;
-    margin-bottom: 5px;
-  }
-
-  header .section-main-nav .logo-container {
-    position: relative;
-    left: 0;
-    transform: none;
-    top: 0;
-    margin-right: auto;
-  }
-
-  header .section-main-nav .logo-background {
-    width: 100px;
-    height: 75px;
-  }
-
-  header .section-main-nav .logo-img {
-    max-width: 70px;
-    max-height: 50px;
-  }
-
-  header .section-main-nav .navbar-nav {
-    margin-left: 0;
-    margin-top: 15px;
-  }
-
-  header .section-main-nav .nav-link {
-    padding: 8px 10px;
-    text-align: center;
-  }
-
-  header .section-main-nav .nav-link.active:after {
-    bottom: 3px;
-    left: 25%;
-    right: 25%;
-  }
-
-  header .section-main-nav .download-btn {
-    display: flex;
-    justify-content: center;
-    margin: 15px 0;
-  }
-}
 /* index swiper */
 /* index page */
 section.home-carousel {
@@ -2827,15 +2734,102 @@ section.home-carousel .swiper-slide img {
   }
 }
 
-/* media query starts */
+/*************************************************************************** media query starts ****************************************************************/
 /* mobile media query */
 @media (min-width: 1px) and (max-width: 767.98px) {
+  /* header */
+  header .section-contact-bar .contact-info {
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  header .section-main-nav .logo-container {
+    position: relative;
+    left: 0;
+    transform: none;
+    top: 0;
+    margin-right: auto;
+  }
+
+  header .section-main-nav .logo-background {
+    width: 100px;
+    height: 75px;
+  }
+
+  header .section-main-nav .logo-img {
+    max-width: 70px;
+    max-height: 50px;
+  }
+
+  header .section-main-nav .navbar-nav {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  header .section-main-nav .nav-link {
+    padding: 8px 10px;
+    text-align: center;
+  }
+
+  header .section-main-nav .nav-link.active:after {
+    bottom: 3px;
+    left: 25%;
+    right: 25%;
+  }
+
+  header .section-main-nav .download-btn {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
   .pad {
     padding: 40px 0;
   }
 }
 /* tablet media query */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  /* header */
+  header .section-contact-bar .contact-info {
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  header .section-main-nav .logo-container {
+    position: relative;
+    left: 0;
+    transform: none;
+    top: 0;
+    margin-right: 15px;
+  }
+
+  header .section-main-nav .logo-background {
+    width: 110px;
+    height: 85px;
+  }
+
+  header .section-main-nav .logo-img {
+    max-width: 80px;
+    max-height: 60px;
+  }
+
+  header .section-main-nav .navbar-nav {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  header .section-main-nav .nav-link {
+    padding: 10px 15px;
+  }
+
+  header .section-main-nav .nav-link.active:after {
+    bottom: 5px;
+  }
+
+  header .section-main-nav .btn-price-list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
   .pad {
     padding: 40px 0;
   }
