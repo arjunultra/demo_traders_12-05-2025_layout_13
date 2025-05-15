@@ -617,7 +617,7 @@ section.home-carousel .swiper-slide img {
 }
 
 .brands-section .brands-section-title {
-  color: var(--color4);
+  color: var(--color1);
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -882,90 +882,6 @@ section.home-carousel .swiper-slide img {
   bottom: 15%;
   right: 20%;
 }
-
-/* Media Queries */
-/* For tablets (md screens) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .about-intro {
-    padding: 80px 0;
-  }
-
-  .about-intro .about-intro-title {
-    font-size: 36px;
-  }
-
-  .about-intro .about-intro-subtitle {
-    font-size: 18px;
-  }
-
-  .about-intro .about-intro-stats {
-    flex-wrap: wrap;
-  }
-
-  .about-intro .about-intro-stat-item {
-    margin-right: 30px;
-    margin-bottom: 15px;
-  }
-
-  .about-intro .about-intro-image-container {
-    margin-top: 40px;
-    padding-left: 15px;
-  }
-
-  .about-intro .about-intro-shape-1 {
-    width: 150px;
-    height: 150px;
-  }
-
-  .about-intro .about-intro-shape-2 {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-/* For mobile (small screens) */
-@media (min-width: 1px) and (max-width: 767.98px) {
-  .about-intro {
-    padding: 60px 0;
-  }
-
-  .about-intro .about-intro-title {
-    font-size: 32px;
-  }
-
-  .about-intro .about-intro-subtitle {
-    font-size: 16px;
-  }
-
-  .about-intro .about-intro-divider {
-    width: 60px;
-    margin-bottom: 20px;
-  }
-
-  .about-intro .about-intro-stats {
-    flex-direction: column;
-  }
-
-  .about-intro .about-intro-stat-item {
-    margin-right: 0;
-    margin-bottom: 20px;
-    align-self: center;
-  }
-
-  .about-intro .about-intro-image-container {
-    margin-top: 40px;
-    padding-bottom: 40px;
-  }
-
-  .about-intro .about-intro-image-accent {
-    bottom: 10px;
-    left: 10px;
-  }
-
-  .about-intro .about-intro-shape {
-    display: none;
-  }
-}
 /* about parallax */
 /* Parallax Section Styles */
 .parallax-section {
@@ -1094,53 +1010,6 @@ section.home-carousel .swiper-slide img {
   right: 15%;
   background: radial-gradient(circle, var(--color1) 0%, transparent 70%);
 }
-
-/* Media Queries */
-/* For tablets (md screens) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .parallax-section {
-    height: 450px;
-  }
-
-  .parallax-section .parallax-section-title {
-    font-size: 36px;
-  }
-
-  .parallax-section .parallax-section-text {
-    font-size: 16px;
-  }
-}
-
-/* For mobile (small screens) */
-@media (min-width: 1px) and (max-width: 767.98px) {
-  .parallax-section {
-    height: 400px;
-  }
-
-  .parallax-section .parallax-section-content {
-    padding: 60px 15px;
-  }
-
-  .parallax-section .parallax-section-title {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-
-  .parallax-section .parallax-section-text {
-    font-size: 15px;
-    margin-bottom: 30px;
-  }
-
-  .parallax-section .parallax-section-btn {
-    padding: 12px 25px;
-    font-size: 14px;
-  }
-
-  .parallax-section .parallax-section-particle {
-    opacity: 0.3;
-  }
-}
-
 /* Additional styles for SplitText compatibility */
 .parallax-section .parallax-char {
   display: inline-block;
@@ -1287,63 +1156,6 @@ section.home-carousel .swiper-slide img {
 
 .text-color1 {
   color: var(--color1);
-}
-
-/* Responsive adjustments */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .why-choose-us-heading {
-    font-size: 2.2rem;
-  }
-
-  .why-choose-us-card {
-    padding: 1.75rem;
-  }
-
-  .why-choose-us-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .why-choose-us-icon i {
-    font-size: 1.75rem;
-  }
-}
-
-@media (min-width: 1px) and (max-width: 767.98px) {
-  .why-choose-us-heading {
-    font-size: 2rem;
-  }
-
-  .why-choose-us-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .why-choose-us-card {
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .why-choose-us-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 1rem;
-  }
-
-  .why-choose-us-icon i {
-    font-size: 1.5rem;
-  }
-
-  .why-choose-us-card-title {
-    font-size: 1.15rem;
-  }
-
-  .why-choose-us-cta {
-    padding: 2rem 1.5rem;
-  }
-
-  .why-choose-us-cta-title {
-    font-size: 1.5rem;
-  }
 }
 /* about page ends */
 /* safety page */
@@ -2443,6 +2255,109 @@ section.home-carousel .swiper-slide img {
 /*************************************************************************** media query starts ****************************************************************/
 /* mobile media query */
 @media (min-width: 1px) and (max-width: 767.98px) {
+  /*about page why choose section  */
+  .why-choose-us-heading {
+    font-size: 2rem;
+  }
+
+  .why-choose-us-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .why-choose-us-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .why-choose-us-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .why-choose-us-icon i {
+    font-size: 1.5rem;
+  }
+
+  .why-choose-us-card-title {
+    font-size: 1.15rem;
+  }
+
+  .why-choose-us-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .why-choose-us-cta-title {
+    font-size: 1.5rem;
+  }
+  /* about parallax */
+  .parallax-section {
+    height: 400px;
+  }
+
+  .parallax-section .parallax-section-content {
+    padding: 60px 15px;
+  }
+
+  .parallax-section .parallax-section-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .parallax-section .parallax-section-text {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .parallax-section .parallax-section-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  .parallax-section .parallax-section-particle {
+    opacity: 0.3;
+  }
+  /* about page intro */
+  .about-intro {
+    padding: 60px 0;
+  }
+
+  .about-intro .about-intro-title {
+    font-size: 32px;
+  }
+
+  .about-intro .about-intro-subtitle {
+    font-size: 16px;
+  }
+
+  .about-intro .about-intro-divider {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+
+  .about-intro .about-intro-stats {
+    flex-direction: column;
+  }
+
+  .about-intro .about-intro-stat-item {
+    margin-right: 0;
+    margin-bottom: 20px;
+    align-self: center;
+  }
+
+  .about-intro .about-intro-image-container {
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .about-intro .about-intro-image-accent {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .about-intro .about-intro-shape {
+    display: none;
+  }
   /* index brands */
   .brands-section {
     padding: 40px 0;
@@ -2644,6 +2559,71 @@ section.home-carousel .swiper-slide img {
 }
 /* tablet media query */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  /* about why choose */
+  .why-choose-us-heading {
+    font-size: 2.2rem;
+  }
+
+  .why-choose-us-card {
+    padding: 1.75rem;
+  }
+
+  .why-choose-us-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .why-choose-us-icon i {
+    font-size: 1.75rem;
+  }
+  /* about parallax */
+  .parallax-section {
+    height: 450px;
+  }
+
+  .parallax-section .parallax-section-title {
+    font-size: 36px;
+  }
+
+  .parallax-section .parallax-section-text {
+    font-size: 16px;
+  }
+  /* about intro */
+  .about-intro {
+    padding: 80px 0;
+  }
+
+  .about-intro .about-intro-title {
+    font-size: 36px;
+  }
+
+  .about-intro .about-intro-subtitle {
+    font-size: 18px;
+  }
+
+  .about-intro .about-intro-stats {
+    flex-wrap: wrap;
+  }
+
+  .about-intro .about-intro-stat-item {
+    margin-right: 30px;
+    margin-bottom: 15px;
+  }
+
+  .about-intro .about-intro-image-container {
+    margin-top: 40px;
+    padding-left: 15px;
+  }
+
+  .about-intro .about-intro-shape-1 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-intro .about-intro-shape-2 {
+    width: 100px;
+    height: 100px;
+  }
   /* index brands */
   .brands-section .brands-section-title {
     font-size: 28px;
