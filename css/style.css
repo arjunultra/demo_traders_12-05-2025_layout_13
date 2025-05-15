@@ -2510,8 +2510,9 @@ section.home-carousel .swiper-slide img {
   }
   /* header */
   header .section-contact-bar .contact-info {
-    justify-content: center;
-    margin-bottom: 5px;
+    justify-content: start;
+    margin: 0.3em auto;
+    max-width: 22em;
   }
 
   header .section-main-nav .logo-container {
