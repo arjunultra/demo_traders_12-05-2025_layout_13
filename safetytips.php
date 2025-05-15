@@ -23,7 +23,6 @@
     <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
     <link rel="icon" sizes="192x192" href="images/android-icon-192x192.png">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/hover-min.css">
     <link rel="stylesheet" href="css/swiper.css">
@@ -317,10 +316,6 @@
             <img src="images/quickpurchase.png" class="priceicn2 float-right blink" alt="" title="">
         </a>
     </div>
-    <script src="js/wow.js"></script>
-    <script>
-        new WOW().init();
-    </script>
     <script src="js/odometer.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/gsap.min.js"></script>

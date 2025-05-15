@@ -34,7 +34,8 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="logo-container">
                     <div class="logo-background">
-                        <img src="images/logo.webp" alt="Sparkle Fireworks Logo" class="logo-img">
+                        <a href="index.php"><img src="images/logo.webp" alt="Sparkle Fireworks Logo"
+                                class="logo-img"></a>
                     </div>
                 </div>
 

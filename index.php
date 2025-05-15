@@ -23,7 +23,6 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
 	<link rel="icon" sizes="192x192" href="images/android-icon-192x192.png">
-	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/hover-min.css">
 	<link rel="stylesheet" href="css/swiper.css">
@@ -179,7 +178,7 @@
 										<h3 class="products-card-title">Bombs</h3>
 										<p class="products-card-description">Experience the thrill of our premium
 											explosive bombs with vibrant colors and thunderous sound effects.</p>
-										<button class="products-card-button">Buy Now</button>
+										<a href="products.php"><button class="products-card-button">Buy Now</button></a>
 									</div>
 								</div>
 							</div>
@@ -284,12 +283,13 @@
 					<h2 class="fireworks-parallax-heading">Lighting Up Celebrations Nationwide</h2>
 					<p class="fireworks-parallax-subtext">Experience the magic of premium fireworks with every
 						celebration.</p>
+					<a class="rounded-lg btn btn-lg btn-outline-danger text-uppercase mt-5" href="contact.php">Contact
+						Us</a>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- index brands  -->
-	<!-- Brands Section -->
 	<section class="brands-section py-5">
 		<div class="container">
 			<div class="row mb-4">
@@ -311,7 +311,7 @@
 										<img src="images/brand1.webp" alt="Black Cat Fireworks"
 											class="brands-image img-fluid">
 									</div>
-									<h3 class="brands-name">Black Cat</h3>
+									<h3 class="brands-name">Brand1</h3>
 								</div>
 							</div>
 
@@ -322,7 +322,7 @@
 										<img src="images/brand2.webp" alt="Phantom Fireworks"
 											class="brands-image img-fluid">
 									</div>
-									<h3 class="brands-name">Phantom</h3>
+									<h3 class="brands-name">Brand2</h3>
 								</div>
 							</div>
 
@@ -333,7 +333,7 @@
 										<img src="images/brand3.webp" alt="TNT Fireworks"
 											class="brands-image img-fluid">
 									</div>
-									<h3 class="brands-name">TNT</h3>
+									<h3 class="brands-name">Brand3</h3>
 								</div>
 							</div>
 
@@ -344,7 +344,7 @@
 										<img src="images/brand4.webp" alt="Brothers Pyrotechnics"
 											class="brands-image img-fluid">
 									</div>
-									<h3 class="brands-name">Brothers</h3>
+									<h3 class="brands-name">Brand4</h3>
 								</div>
 							</div>
 
@@ -355,7 +355,7 @@
 										<img src="images/brand5.webp" alt="Winda Fireworks"
 											class="brands-image img-fluid">
 									</div>
-									<h3 class="brands-name">Winda</h3>
+									<h3 class="brands-name">Brand5</h3>
 								</div>
 							</div>
 
@@ -366,7 +366,7 @@
 										<img src="images/brand6.webp" alt="Shogun Fireworks"
 											class="brands-image img-fluid">
 									</div>
-									<h3 class="brands-name">Shogun</h3>
+									<h3 class="brands-name">Brand6</h3>
 								</div>
 							</div>
 
@@ -377,7 +377,7 @@
 										<img src="images/brand7.webp" alt="Pyro King Fireworks"
 											class="brands-image img-fluid">
 									</div>
-									<h3 class="brands-name">Pyro King</h3>
+									<h3 class="brands-name">Brand7</h3>
 								</div>
 							</div>
 
@@ -388,7 +388,7 @@
 										<img src="images/brand8.webp" alt="Golden Dragon Fireworks"
 											class="brands-image img-fluid">
 									</div>
-									<h3 class="brands-name">Golden Dragon</h3>
+									<h3 class="brands-name">Brand8</h3>
 								</div>
 							</div>
 						</div>
@@ -422,10 +422,6 @@
 			<img src="images/quickpurchase.png" class="priceicn2 float-right blink" alt="" title="">
 		</a>
 	</div>
-	<script src="js/wow.js"></script>
-	<script>
-		new WOW().init();
-	</script>
 	<script src="js/odometer.min.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
 	<script src="js/simpleParallax.js"></script>

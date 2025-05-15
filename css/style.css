@@ -131,7 +131,7 @@ header .section-main-nav .logo-background {
   background-size: contain;
   background-position: center;
   width: 192px;
-  height: 131px;
+  height: 134px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -644,14 +644,7 @@ section.home-carousel .swiper-slide img {
     font-size: 15px;
   }
 }
-.index-achievements-counter-box {
-  opacity: 1 !important;
-  transform: translate(0, 0) !important;
-}
-.index-achievements-icon {
-  opacity: 1 !important;
-  transform: scale(1) rotate(0) !important;
-}
+
 /* index products-section */
 /* Products Section Styles */
 .products-section {
@@ -882,7 +875,7 @@ section.home-carousel .swiper-slide img {
 .fireworks-parallax {
   background-image: url("../images/index-parallax-bg.webp");
   background-attachment: fixed;
-  background-position: center;
+  background-position: 20% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
@@ -1067,6 +1060,679 @@ section.home-carousel .swiper-slide img {
   }
 }
 /* index page ends */
+/* about page starts */
+/* About Intro Section Styles */
+.about-intro {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color5);
+}
+
+/* Typography */
+.about-intro .about-intro-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color4);
+}
+
+.about-intro .about-intro-highlight {
+  color: var(--color1);
+  position: relative;
+}
+
+.about-intro .about-intro-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--color3);
+}
+
+.about-intro .about-intro-text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: var(--color4);
+}
+
+.about-intro .about-intro-divider {
+  width: 80px;
+  height: 4px;
+  background: var(--color2);
+  margin-bottom: 25px;
+}
+
+/* Stats Section */
+.about-intro .about-intro-stats {
+  display: flex;
+  margin: 40px 0;
+}
+
+.about-intro .about-intro-stat-item {
+  margin-right: 40px;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.about-intro .about-intro-stat-item:hover {
+  transform: translateY(-10px);
+}
+
+.about-intro .about-intro-stat-number {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color1);
+  position: relative;
+  z-index: 2;
+}
+
+.about-intro .about-intro-stat-label {
+  font-size: 14px;
+  color: var(--color4);
+  opacity: 0.8;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.about-intro .about-intro-stat-item::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--color2);
+  transition: width 0.3s ease;
+  z-index: 1;
+}
+
+.about-intro .about-intro-stat-item:hover::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.about-intro .about-intro-btn {
+  display: inline-block;
+  background-color: var(--color1);
+  color: var(--color5);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 6px 15px rgba(220, 20, 60, 0.2);
+}
+
+.about-intro .about-intro-btn:hover {
+  background-color: var(--color3);
+  color: var(--color5);
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(153, 50, 204, 0.3);
+  transform: translateY(-2px);
+}
+
+.about-intro .about-intro-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.7s ease;
+}
+
+.about-intro .about-intro-btn:hover::before {
+  left: 100%;
+}
+
+.about-intro .about-intro-btn i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.about-intro .about-intro-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Image Styling */
+.about-intro .about-intro-image-container {
+  position: relative;
+  height: 100%;
+  padding-top: 30px;
+}
+
+.about-intro .about-intro-image {
+  position: relative;
+  z-index: 3;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-intro .about-intro-image-main {
+  max-width: 90%;
+  margin-left: auto;
+}
+
+.about-intro .about-intro-image-accent {
+  position: absolute;
+  bottom: 137px;
+  left: 0;
+  max-width: 50%;
+  z-index: 4;
+  border: 5px solid var(--color5);
+}
+
+.about-intro .about-intro-image img {
+  transition: transform 0.5s ease;
+}
+
+.about-intro .about-intro-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Background Shapes */
+.about-intro .about-intro-shape {
+  position: absolute;
+  z-index: 1;
+}
+
+.about-intro .about-intro-shape-1 {
+  width: 200px;
+  height: 200px;
+  background-color: var(--color2);
+  opacity: 0.2;
+  border-radius: 50%;
+  top: 10%;
+  right: 5%;
+}
+
+.about-intro .about-intro-shape-2 {
+  width: 150px;
+  height: 150px;
+  background-color: var(--color3);
+  opacity: 0.15;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  bottom: 15%;
+  right: 20%;
+}
+
+/* Media Queries */
+/* For tablets (md screens) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .about-intro {
+    padding: 80px 0;
+  }
+
+  .about-intro .about-intro-title {
+    font-size: 36px;
+  }
+
+  .about-intro .about-intro-subtitle {
+    font-size: 18px;
+  }
+
+  .about-intro .about-intro-stats {
+    flex-wrap: wrap;
+  }
+
+  .about-intro .about-intro-stat-item {
+    margin-right: 30px;
+    margin-bottom: 15px;
+  }
+
+  .about-intro .about-intro-image-container {
+    margin-top: 40px;
+    padding-left: 15px;
+  }
+
+  .about-intro .about-intro-shape-1 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-intro .about-intro-shape-2 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* For mobile (small screens) */
+@media (min-width: 1px) and (max-width: 767.98px) {
+  .about-intro {
+    padding: 60px 0;
+  }
+
+  .about-intro .about-intro-title {
+    font-size: 32px;
+  }
+
+  .about-intro .about-intro-subtitle {
+    font-size: 16px;
+  }
+
+  .about-intro .about-intro-divider {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+
+  .about-intro .about-intro-stats {
+    flex-direction: column;
+  }
+
+  .about-intro .about-intro-stat-item {
+    margin-right: 0;
+    margin-bottom: 20px;
+    align-self: center;
+  }
+
+  .about-intro .about-intro-image-container {
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .about-intro .about-intro-image-accent {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .about-intro .about-intro-shape {
+    display: none;
+  }
+}
+/* about parallax */
+/* Parallax Section Styles */
+.parallax-section {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  color: var(--color5);
+  z-index: 1;
+}
+
+.parallax-section .parallax-section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.parallax-section .parallax-section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0.7) 0%,
+    rgba(18, 18, 18, 0.9) 100%
+  );
+  z-index: -1;
+}
+
+.parallax-section .parallax-section-content {
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  z-index: 5;
+}
+
+.parallax-section .parallax-section-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--color5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.parallax-section .parallax-section-text {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color5);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.parallax-section .parallax-section-btn {
+  display: inline-block;
+  background-color: var(--color2);
+  color: var(--color4);
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(211, 232, 9, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parallax-section .parallax-section-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(211, 232, 9, 0.3);
+  color: var(--color4);
+  text-decoration: none;
+}
+
+.parallax-section .parallax-section-btn i {
+  margin-left: 8px;
+  position: relative;
+  top: 1px;
+}
+
+/* Particle animations */
+.parallax-section .parallax-section-particle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.parallax-section .parallax-section-particle-1 {
+  width: 180px;
+  height: 180px;
+  top: 10%;
+  left: 5%;
+  background: radial-gradient(circle, var(--color1) 0%, transparent 70%);
+}
+
+.parallax-section .parallax-section-particle-2 {
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  right: 10%;
+  background: radial-gradient(circle, var(--color2) 0%, transparent 70%);
+}
+
+.parallax-section .parallax-section-particle-3 {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  left: 15%;
+  background: radial-gradient(circle, var(--color3) 0%, transparent 70%);
+}
+
+.parallax-section .parallax-section-particle-4 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  right: 15%;
+  background: radial-gradient(circle, var(--color1) 0%, transparent 70%);
+}
+
+/* Media Queries */
+/* For tablets (md screens) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .parallax-section {
+    height: 450px;
+  }
+
+  .parallax-section .parallax-section-title {
+    font-size: 36px;
+  }
+
+  .parallax-section .parallax-section-text {
+    font-size: 16px;
+  }
+}
+
+/* For mobile (small screens) */
+@media (min-width: 1px) and (max-width: 767.98px) {
+  .parallax-section {
+    height: 400px;
+  }
+
+  .parallax-section .parallax-section-content {
+    padding: 60px 15px;
+  }
+
+  .parallax-section .parallax-section-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .parallax-section .parallax-section-text {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .parallax-section .parallax-section-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  .parallax-section .parallax-section-particle {
+    opacity: 0.3;
+  }
+}
+
+/* Additional styles for SplitText compatibility */
+.parallax-section .parallax-char {
+  display: inline-block;
+  position: relative;
+}
+
+.parallax-section .parallax-word {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+}
+
+.parallax-section .parallax-line {
+  display: block;
+  position: relative;
+}
+/* about page why choose section */
+.why-choose-us {
+  position: relative;
+  background-color: var(--color5);
+  overflow: hidden;
+  /* Add for GSAP animations */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* SVG Background */
+.why-choose-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23dc143c' d='M50 0 L75 25 L100 0 L75 25 L100 50 L75 75 L100 100 L75 75 L50 100 L25 75 L0 100 L25 75 L0 50 L25 25 L0 0 L25 25 Z'%3E%3C/path%3E%3Cpath fill='%239932cc' d='M50 25 L75 50 L50 75 L25 50 Z'%3E%3C/path%3E%3Cpath fill='%23d3e809' d='M50 40 L60 50 L50 60 L40 50 Z'%3E%3C/path%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+.why-choose-us .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Headings */
+.why-choose-us-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color4);
+}
+
+.why-choose-us-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Feature Cards */
+.why-choose-us-card {
+  background-color: var(--color5);
+  border-radius: 8px;
+  padding: 2rem;
+  height: 100%;
+  /* transition: all 0.3s ease; */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  /* Add for GSAP animations */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.why-choose-us-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose-us-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: var(--color2);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.why-choose-us-icon i {
+  font-size: 2rem;
+  color: var(--color4);
+}
+
+.why-choose-us-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color4);
+}
+
+.why-choose-us-card-text {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.why-choose-us-cta {
+  background: linear-gradient(135deg, var(--color1), var(--color3));
+  padding: 2.5rem;
+  border-radius: 10px;
+  color: var(--color5);
+}
+
+.why-choose-us-cta-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.why-choose-us-cta-text {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.why-choose-us-btn {
+  background-color: var(--color2);
+  color: var(--color4);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.why-choose-us-btn:hover {
+  background-color: #fff;
+  color: var(--color1);
+  transform: scale(1.05);
+}
+
+.text-color1 {
+  color: var(--color1);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .why-choose-us-heading {
+    font-size: 2.2rem;
+  }
+
+  .why-choose-us-card {
+    padding: 1.75rem;
+  }
+
+  .why-choose-us-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .why-choose-us-icon i {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 767.98px) {
+  .why-choose-us-heading {
+    font-size: 2rem;
+  }
+
+  .why-choose-us-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .why-choose-us-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .why-choose-us-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .why-choose-us-icon i {
+    font-size: 1.5rem;
+  }
+
+  .why-choose-us-card-title {
+    font-size: 1.15rem;
+  }
+
+  .why-choose-us-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .why-choose-us-cta-title {
+    font-size: 1.5rem;
+  }
+}
+/* about page ends */
 /* safety page */
 /* Safety Guidelines Section Styles */
 

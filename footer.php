@@ -3,7 +3,8 @@
         <div class="row">
             <!-- Brand Column -->
             <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 text-center align-self-center">
-                <img src="images/logo.webp" alt="Demo Traders Logo" class="img-fluid mb-3" style="max-width: 150px;">
+                <a href="index.php"><img src="images/logo.webp" alt="Demo Traders Logo" class="img-fluid mb-3"
+                        style="max-width: 150px;"></a>
                 <p class="footer-about mb-0">
                     Your trusted wholesale partner for premium fireworks and crackers. Safe, certified, and delivered
                     with care.
@@ -18,11 +19,11 @@
                         <div class="text-center text-md-left">
                             <h5 class="footer-heading">Quick Links</h5>
                             <ul class="footer-links list-unstyled">
-                                <li><a href="index.php">Home</a></li>
-                                <li><a href="about.php">About</a></li>
-                                <li><a href="products.php">Products</a></li>
-                                <li><a href="safetytips.php">Safety Tips</a></li>
-                                <li><a href="contact.php">Contact</a></li>
+                                <li class="mb-3"><a href="index.php">Home</a></li>
+                                <li class="mb-3"><a href="about.php">About</a></li>
+                                <li class="mb-3"><a href="products.php">Products</a></li>
+                                <li class="mb-3"><a href="safetytips.php">Safety Tips</a></li>
+                                <li class="mb-3"><a href="contact.php">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -33,11 +34,11 @@
                             <h5 class="footer-heading">Store Hours</h5>
                             <ul
                                 class="footer-hours list-unstyled d-flex flex-column align-items-center align-self-md-start">
-                                <li class="d-flex align-items-baseline">
+                                <li class="d-flex align-items-baseline mb-3">
                                     <div class="mr-2"><i class="bi bi-clock"></i></div>
                                     <p class="mb-0">Mon–Sat: 9:00 AM – 9:00 PM</p>
                                 </li>
-                                <li class="d-flex align-items-baseline">
+                                <li class="d-flex align-items-baseline mb-3">
                                     <div class="mr-2"><i class="bi bi-clock"></i></div>
                                     <p class="mb-0">
                                         Sunday: 10:00 AM – 5:00 PM
@@ -60,15 +61,15 @@
                 <div class="text-center text-md-left">
                     <h5 class="footer-heading last-column-heading">Get in Touch</h5>
                     <ul class="footer-contact list-unstyled d-flex flex-column align-items-center align-items-md-start">
-                        <li class="d-flex align-items-baseline">
+                        <li class="d-flex align-items-baseline mb-3">
                             <div class="mr-2"><i class="bi bi-geo-alt-fill"></i></div>
                             <p class="mb-0">123, Demo Complex, Sivakasi - 626123</p>
                         </li>
-                        <li class="d-flex align-items-baseline">
+                        <li class="d-flex align-items-baseline mb-3">
                             <div class="mr-2"><i class="bi bi-telephone-fill"></i></div>
                             <p class="mb-0">+91 99999 99999</p>
                         </li>
-                        <li class="d-flex align-items-baseline">
+                        <li class="d-flex align-items-baseline mb-3">
                             <div class="mr-2"><i class="bi bi-envelope-fill"></i></div>
                             <p class="mb-0">contact@demotraders.com</p>
                         </li>
