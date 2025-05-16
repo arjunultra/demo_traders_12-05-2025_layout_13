@@ -1452,83 +1452,6 @@ section.home-carousel .swiper-slide img {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
-
-/* Tablet Breakpoint */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .safety-guidelines {
-    padding: 60px 0;
-  }
-
-  .safety-guidelines .safety-guidelines-cards-container {
-    grid-template-columns: 1fr;
-  }
-
-  .safety-guidelines .safety-guidelines-card {
-    height: 180px;
-  }
-
-  .safety-guidelines .safety-guidelines-column {
-    padding: 25px 20px;
-    margin-bottom: 30px;
-  }
-
-  .safety-guidelines .safety-guidelines-cta {
-    padding: 25px;
-  }
-
-  .safety-guidelines .safety-guidelines-cta h4 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Mobile Breakpoint */
-@media (min-width: 1px) and (max-width: 767.98px) {
-  .safety-guidelines {
-    padding: 40px 0;
-  }
-
-  .safety-guidelines .section-title {
-    font-size: 2rem;
-  }
-
-  .safety-guidelines .safety-guidelines-divider:before,
-  .safety-guidelines .safety-guidelines-divider:after {
-    width: 40px;
-  }
-
-  .safety-guidelines .safety-guidelines-column {
-    padding: 20px 15px;
-    margin-bottom: 30px;
-  }
-
-  .safety-guidelines .safety-guidelines-cards-container {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .safety-guidelines .safety-guidelines-card {
-    height: 170px;
-  }
-
-  .safety-guidelines .safety-guidelines-column-title {
-    font-size: 1.5rem;
-  }
-
-  .safety-guidelines .safety-guidelines-cta {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .safety-guidelines .safety-guidelines-cta h4 {
-    font-size: 1.4rem;
-  }
-
-  .safety-guidelines .safety-guidelines-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-}
 /* contact page */
 /* Fireworks Contact Section Styles */
 .fireworks-contact {
@@ -1918,196 +1841,221 @@ section.home-carousel .swiper-slide img {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(75, 0, 130, 0.3);
 }
-
-/* Media Queries for Tablets */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .fireworks-contact-title {
-    font-size: 2.2rem;
-  }
-
-  .fireworks-contact-card {
-    padding: 1.5rem;
-  }
-
-  .fireworks-contact-card-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-  }
-
-  .fireworks-contact-card-title {
-    font-size: 1.2rem;
-  }
-
-  .fireworks-contact-phone-item,
-  .fireworks-contact-email-item,
-  .fireworks-contact-hours-item {
-    flex-direction: column;
-  }
-
-  .fireworks-contact-phone-item span,
-  .fireworks-contact-email-item span {
-    margin-bottom: 0.25rem;
-  }
-
-  .fireworks-contact-directions-btn {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
-}
-
-/* Media Queries for Mobile */
-@media (min-width: 1px) and (max-width: 767.98px) {
-  .fireworks-contact-title {
-    font-size: 1.8rem;
-  }
-
-  .fireworks-contact-subtitle {
-    font-size: 1rem;
-  }
-
-  .fireworks-contact-badge {
-    font-size: 0.7rem;
-  }
-
-  .fireworks-contact-card {
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .fireworks-contact-card-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-  }
-
-  .fireworks-contact-card-title {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-  }
-
-  .fireworks-contact-phone-item,
-  .fireworks-contact-email-item,
-  .fireworks-contact-hours-item {
-    flex-direction: column;
-  }
-
-  .fireworks-contact-phone-item a,
-  .fireworks-contact-email-item a {
-    font-size: 0.9rem;
-  }
-
-  .fireworks-contact-phone-item span,
-  .fireworks-contact-email-item span,
-  .fireworks-contact-day {
-    margin-bottom: 0.25rem;
-    font-size: 0.9rem;
-  }
-
-  .fireworks-contact-time {
-    font-size: 0.9rem;
-  }
-
-  .fireworks-contact-map-wrapper {
-    margin-top: 1rem;
-  }
-
-  .fireworks-contact-map {
-    height: 250px;
-  }
-
-  .fireworks-contact-directions-btn {
-    bottom: 15px;
-    right: 15px;
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-  }
-}
-/* Footer Styles */
+/* Fireworks Footer Styles */
+/* Fireworks Footer Styles */
 .fireworks-footer {
-  background-color: var(--color4);
-  color: var(--color5);
   position: relative;
+  background: var(--color4);
+  color: var(--color5);
+  padding: 0;
+  overflow: hidden;
 }
 
+/* Wave SVG Containers */
+.fireworks-footer .wavy-svg-container {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  left: 0;
+  z-index: 1;
+}
+
+.fireworks-footer .top-wave-container {
+  top: -20px;
+  transform: rotate(180deg);
+}
+
+.fireworks-footer .bottom-wave-container {
+  bottom: -5px;
+}
+
+/* Important: Make sure the SVG path is visible with proper fill */
+.fireworks-footer .wave-path {
+  fill: var(--color2);
+}
+
+/* Footer Content */
+.fireworks-footer .footer-content {
+  position: relative;
+  z-index: 2;
+  padding: 70px 0 50px;
+}
+
+/* Footer Logo and About */
+.fireworks-footer .footer-about {
+  color: #f0f0f0;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Footer Headings */
 .fireworks-footer .footer-heading {
   color: var(--color2);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 25px;
   position: relative;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
+  display: inline-block;
 }
 
-.fireworks-footer .footer-heading::after {
+.fireworks-footer .footer-heading:after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -8px;
   left: 0;
-  width: 50px;
+  width: 40px;
   height: 3px;
-  background-color: var(--color1);
+  background: var(--color1);
+  border-radius: 2px;
 }
 
-.fireworks-footer .footer-about {
-  color: var(--color5);
-  opacity: 0.8;
-  line-height: 1.6;
+/* Footer Links */
+.fireworks-footer .footer-links li a {
+  color: #f0f0f0;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding-left: 5px;
 }
 
-.fireworks-footer .footer-links,
-.fireworks-footer .footer-hours,
-.fireworks-footer .footer-contact {
-  list-style: none;
-  padding: 0;
+.fireworks-footer .footer-links li a:before {
+  content: "•";
+  color: var(--color1);
+  position: absolute;
+  left: -10px;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
-.fireworks-footer .footer-links a,
-.fireworks-footer .developer-link {
-  color: var(--color5);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.fireworks-footer .footer-links a:hover,
-.fireworks-footer .developer-link:hover {
+.fireworks-footer .footer-links li a:hover {
   color: var(--color2);
   text-decoration: none;
+  transform: translateX(10px);
 }
 
-.fireworks-footer .bi {
-  color: var(--color2);
-  margin-right: 10px;
-  font-size: 1.1rem;
-}
-
-.fireworks-footer .developer-link {
-  font-size: 0.9rem;
-  opacity: 0.7;
-}
-
-.fireworks-footer .developer-link:hover {
+.fireworks-footer .footer-links li a:hover:before {
   opacity: 1;
+  left: -5px;
 }
 
-.fireworks-footer .small {
-  color: var(--color5);
-  opacity: 0.6;
+/* Store Hours and Contact */
+.fireworks-footer .footer-hours li,
+.fireworks-footer .footer-contact li {
+  display: flex;
+  align-items: center;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 991.98px) {
-  .fireworks-footer .footer-heading::after {
+.fireworks-footer .footer-hours .mr-2,
+.fireworks-footer .footer-contact .mr-2 {
+  margin-right: 15px;
+  color: var(--color2);
+  font-size: 18px;
+}
+
+.fireworks-footer .footer-hours p,
+.fireworks-footer .footer-contact p {
+  font-size: 15px;
+  color: #f0f0f0;
+}
+
+/* Copyright Section */
+.fireworks-footer .border-top {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.fireworks-footer .developer-link {
+  color: var(--color2);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.fireworks-footer .developer-link:hover {
+  color: var(--color1);
+  text-decoration: none;
+}
+
+/* GSAP Animation Helper Classes */
+.fireworks-footer .fade-in {
+  opacity: 0;
+}
+
+.fireworks-footer .slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Tablet (md screens) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fireworks-footer .footer-content {
+    padding: 60px 0 40px;
+  }
+
+  .fireworks-footer .footer-heading {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .fireworks-footer .footer-about {
+    font-size: 14px;
+  }
+
+  .fireworks-footer .last-column-heading {
+    margin-top: 20px;
+  }
+
+  .fireworks-footer .footer-links,
+  .fireworks-footer .footer-hours,
+  .fireworks-footer .footer-contact {
+    padding-left: 10px;
+  }
+}
+
+/* Mobile (sm and xs screens) */
+@media (min-width: 1px) and (max-width: 767.98px) {
+  .fireworks-footer {
+    margin-top: 60px;
+  }
+
+  .fireworks-footer .wavy-svg-container {
+    height: 80px;
+  }
+
+  .fireworks-footer .top-wave-container {
+    top: -80px;
+  }
+
+  .fireworks-footer .footer-content {
+    padding: 50px 0 30px;
+  }
+
+  .fireworks-footer .footer-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+  }
+
+  .fireworks-footer .footer-about {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .fireworks-footer .footer-heading:after {
     left: 50%;
     transform: translateX(-50%);
   }
 
-  .fireworks-footer .text-center,
-  .fireworks-footer .text-md-left {
-    text-align: center !important;
+  .fireworks-footer .footer-links,
+  .fireworks-footer .footer-hours,
+  .fireworks-footer .footer-contact {
+    margin-bottom: 20px;
   }
 
-  .fireworks-footer .align-items-md-start {
-    align-items: center !important;
+  .fireworks-footer .footer-links li,
+  .fireworks-footer .footer-hours li,
+  .fireworks-footer .footer-contact li {
+    justify-content: center;
   }
 }
 /* utility classes */
@@ -2255,6 +2203,158 @@ section.home-carousel .swiper-slide img {
 /*************************************************************************** media query starts ****************************************************************/
 /* mobile media query */
 @media (min-width: 1px) and (max-width: 767.98px) {
+  /* footer styles */
+  .fireworks-footer .footer-heading {
+    text-align: center;
+  }
+  .fireworks-footer .footer-heading::after {
+    left: 125px;
+  }
+
+  .fireworks-footer .footer-about {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .fireworks-footer .footer-links,
+  .fireworks-footer .footer-hours,
+  .fireworks-footer .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fireworks-footer .footer-links li,
+  .fireworks-footer .footer-hours li,
+  .fireworks-footer .footer-contact li {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .fireworks-footer .footer-links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .fireworks-footer .developer-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* contact page */
+  .fireworks-contact-title {
+    font-size: 1.8rem;
+  }
+
+  .fireworks-contact-subtitle {
+    font-size: 1rem;
+  }
+
+  .fireworks-contact-badge {
+    font-size: 0.7rem;
+  }
+
+  .fireworks-contact-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .fireworks-contact-card-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .fireworks-contact-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .fireworks-contact-phone-item,
+  .fireworks-contact-email-item,
+  .fireworks-contact-hours-item {
+    flex-direction: column;
+  }
+
+  .fireworks-contact-phone-item a,
+  .fireworks-contact-email-item a {
+    font-size: 0.9rem;
+  }
+
+  .fireworks-contact-phone-item span,
+  .fireworks-contact-email-item span,
+  .fireworks-contact-day {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .fireworks-contact-time {
+    font-size: 0.9rem;
+  }
+
+  .fireworks-contact-map-wrapper {
+    margin-top: 1rem;
+  }
+
+  .fireworks-contact-map {
+    height: 250px;
+  }
+
+  .fireworks-contact-directions-btn {
+    bottom: 15px;
+    right: 15px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  /* safety page */
+  .safety-guidelines {
+    padding: 40px 0;
+  }
+
+  .safety-guidelines .section-title {
+    font-size: 2rem;
+  }
+
+  .safety-guidelines .safety-guidelines-divider:before,
+  .safety-guidelines .safety-guidelines-divider:after {
+    width: 40px;
+  }
+
+  .safety-guidelines .safety-guidelines-column {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+  }
+
+  .safety-guidelines .safety-guidelines-cards-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .safety-guidelines .safety-guidelines-card {
+    height: 170px;
+  }
+
+  .safety-guidelines .safety-guidelines-column-title {
+    font-size: 1.5rem;
+  }
+
+  .safety-guidelines .safety-guidelines-cta {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .safety-guidelines .safety-guidelines-cta h4 {
+    font-size: 1.4rem;
+  }
+
+  .safety-guidelines .safety-guidelines-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
   /*about page why choose section  */
   .why-choose-us-heading {
     font-size: 2rem;
@@ -2560,6 +2660,87 @@ section.home-carousel .swiper-slide img {
 }
 /* tablet media query */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  /* footer styles */
+  .fireworks-footer .footer-about {
+    text-align: left;
+  }
+
+  .fireworks-footer .footer-links,
+  .fireworks-footer .footer-hours,
+  .fireworks-footer .footer-contact {
+    display: block;
+    text-align: left;
+  }
+
+  .fireworks-footer .footer-links li,
+  .fireworks-footer .footer-hours li,
+  .fireworks-footer .footer-contact li {
+    margin-bottom: 8px;
+  }
+
+  .fireworks-footer .footer-links a {
+    display: inline-block;
+    width: auto;
+  }
+  /* contact page */
+  .fireworks-contact-title {
+    font-size: 2.2rem;
+  }
+
+  .fireworks-contact-card {
+    padding: 1.5rem;
+  }
+
+  .fireworks-contact-card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .fireworks-contact-card-title {
+    font-size: 1.2rem;
+  }
+
+  .fireworks-contact-phone-item,
+  .fireworks-contact-email-item,
+  .fireworks-contact-hours-item {
+    flex-direction: column;
+  }
+
+  .fireworks-contact-phone-item span,
+  .fireworks-contact-email-item span {
+    margin-bottom: 0.25rem;
+  }
+
+  .fireworks-contact-directions-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  /* safety page */
+  .safety-guidelines {
+    padding: 60px 0;
+  }
+
+  .safety-guidelines .safety-guidelines-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .safety-guidelines .safety-guidelines-card {
+    height: 180px;
+  }
+
+  .safety-guidelines .safety-guidelines-column {
+    padding: 25px 20px;
+    margin-bottom: 30px;
+  }
+
+  .safety-guidelines .safety-guidelines-cta {
+    padding: 25px;
+  }
+
+  .safety-guidelines .safety-guidelines-cta h4 {
+    font-size: 1.5rem;
+  }
   /* about why choose */
   .why-choose-us-heading {
     font-size: 2.2rem;

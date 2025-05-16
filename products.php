@@ -65,12 +65,12 @@
             <img src="images/quickpurchase.png" class="priceicn2 float-right blink" alt="" title="">
         </a>
     </div>
-    <script defer src="js/wow.js"></script>
-    <script>
-        new WOW().init();
-    </script>
     <script src="js/odometer.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/SplitText.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/MorphSVGPlugin.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

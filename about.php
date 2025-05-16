@@ -241,6 +241,7 @@
     <script src="js/SplitText.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/MorphSVGPlugin.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

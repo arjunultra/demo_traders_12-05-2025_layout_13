@@ -35,7 +35,8 @@
 <body itemscope itemtype="http://schema.org/WebPage">
     <?php include_once "header.php"; ?>
     <section class="safety-banner">
-        <img class="img-fluid" src="images/safety-banner.webp" alt="demo traders about banner" title="Demo Traders">
+        <img class="img-fluid w-100" src="images/safety-banner.webp" alt="demo traders about banner"
+            title="Demo Traders">
     </section>
     <!-- Safety Guidelines Section -->
     <section class="safety-guidelines">
@@ -321,6 +322,7 @@
     <script src="js/gsap.min.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/MorphSVGPlugin.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

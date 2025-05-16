@@ -1935,5 +1935,252 @@ window.onload = function () {
   // === Call Main Initialization ===
   initializeWhyChooseUsAnimations();
 };
+// GSAP Animation for Footer
+document.addEventListener('DOMContentLoaded', function() {
+  // Make sure plugins are registered
+  if (typeof gsap !== 'undefined') {
+    if (typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+    if (typeof MorphSVGPlugin !== 'undefined') {
+      gsap.registerPlugin(MorphSVGPlugin);
+    }
+    
+    // Initialize footer animations without affecting other animations
+    initFooterAnimations();
+  }
+});
 
+function initFooterAnimations() {
+  const topWave = document.querySelector(".fireworks-footer .top-wave-container .wave-path");
+  const bottomWave = document.querySelector(".fireworks-footer .bottom-wave-container .wave-path");
+  
+  // Properly animate SVG wave paths without moving the entire SVG
+  if (topWave) {
+    // Create smoother animation for top wave
+    const topWaveTl = gsap.timeline({
+      repeat: -1,
+      yoyo: true
+    });
+    
+    // Starting and end control points for wave animation
+    topWaveTl.to(topWave, {
+      duration: 3,
+      attr: {
+        d: "M0,32L80,48C160,64,320,96,480,90.7C640,85,800,43,960,32C1120,21,1280,43,1360,53.3L1440,64L1440,120L0,120Z"
+      },
+      ease: "sine.inOut"
+    }).to(topWave, {
+      duration: 3,
+      attr: {
+        d: "M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L0,120Z"  
+      },
+      ease: "sine.inOut"
+    }).to(topWave, {
+      duration: 3,
+      attr: {
+        d: "M0,48L80,42.7C160,37,320,27,480,32C640,37,800,59,960,64C1120,69,1280,59,1360,53.3L1440,48L1440,120L0,120Z"
+      },
+      ease: "sine.inOut"
+    });
+  }
+  
+  if (bottomWave) {
+    // Create animation for bottom wave with different timing
+    const bottomWaveTl = gsap.timeline({
+      repeat: -1,
+      yoyo: true
+    });
+    
+    bottomWaveTl.to(bottomWave, {
+      duration: 4,
+      attr: {
+        d: "M0,48L80,42.7C160,37,320,27,480,32C640,37,800,59,960,69.3C1120,80,1280,91,1360,96L1440,101.3L1440,120L0,120Z"
+      },
+      ease: "sine.inOut"
+    }).to(bottomWave, {
+      duration: 4,
+      attr: {
+        d: "M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,42.7C1120,32,1280,21,1360,16L1440,10.7L1440,120L0,120Z"
+      },
+      ease: "sine.inOut"
+    });
+  }
+  
+  // Fireworks wave effect animation
+  const burstsContainer = document.querySelector(".fireworks-footer");
+  if (burstsContainer && typeof gsap !== 'undefined') {
+    // Create animated firework bursts that appear occasionally at the top of the footer
+    function createFireworkBurst() {
+      const burst = document.createElement('div');
+      burst.className = 'firework-burst';
+      
+      // Apply styles
+      Object.assign(burst.style, {
+        position: 'absolute',
+        width: '6px',
+        height: '6px',
+        borderRadius: '50%',
+        backgroundColor: 'var(--color1)',
+        top: '-10px',
+        left: Math.random() * 100 + '%',
+        zIndex: '3',
+        pointerEvents: 'none'
+      });
+      
+      burstsContainer.appendChild(burst);
+      
+      // Animate the burst
+      gsap.to(burst, {
+        duration: 1 + Math.random(),
+        y: -100 * (Math.random() + 0.5),
+        x: (Math.random() - 0.5) * 100,
+        opacity: 0,
+        scale: 0,
+        onComplete: function() {
+          burst.remove();
+        }
+      });
+      
+      // Create particles around the burst
+      for (let i = 0; i < 5; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'firework-particle';
+        
+        // Apply styles
+        Object.assign(particle.style, {
+          position: 'absolute',
+          width: '3px',
+          height: '3px',
+          borderRadius: '50%',
+          backgroundColor: Math.random() > 0.5 ? 'var(--color2)' : 'var(--color1)',
+          top: burst.offsetTop + 'px',
+          left: burst.offsetLeft + 'px',
+          zIndex: '3',
+          pointerEvents: 'none'
+        });
+        
+        burstsContainer.appendChild(particle);
+        
+        // Animate the particle
+        gsap.to(particle, {
+          duration: 0.8 + Math.random(),
+          y: -60 * (Math.random() + 0.5),
+          x: (Math.random() - 0.5) * 80,
+          opacity: 0,
+          onComplete: function() {
+            particle.remove();
+          }
+        });
+      }
+    }
+    
+    // Create firework bursts at random intervals
+    function scheduleNextBurst() {
+      setTimeout(function() {
+        createFireworkBurst();
+        scheduleNextBurst();
+      }, Math.random() * 3000 + 2000); // Random interval between 2-5 seconds
+    }
+    
+    scheduleNextBurst();
+  }
+  
+  // Main footer content animations - with ID to make it specific
+  const footerElement = document.querySelector(".fireworks-footer");
+  if (!footerElement) return; // Safety check
+  
+  const footerContent = gsap.timeline({
+    scrollTrigger: {
+      trigger: footerElement,
+      start: "top 80%",
+      end: "bottom bottom",
+      toggleActions: "play none none none",
+      id: "footer-animation" // Give it a unique ID
+    }
+  });
+  
+  // Logo and about text animation
+  const footerLogo = document.querySelector(".fireworks-footer img");
+  const footerAbout = document.querySelector(".fireworks-footer .footer-about");
+  
+  if (footerLogo) {
+    footerContent.from(footerLogo, {
+      opacity: 0, 
+      y: 30,
+      duration: 0.8,
+      ease: "power3.out"
+    });
+  }
+  
+  if (footerAbout) {
+    footerContent.from(footerAbout, {
+      opacity: 0,
+      y: 20,
+      duration: 0.6,
+      ease: "power3.out"
+    }, "-=0.4");
+  }
+  
+  // Headings animations
+  const footerHeadings = document.querySelectorAll(".fireworks-footer .footer-heading");
+  if (footerHeadings.length > 0) {
+    footerContent.from(footerHeadings, {
+      opacity: 0,
+      y: 20,
+      duration: 0.6,
+      stagger: 0.2,
+      ease: "power3.out"
+    }, "-=0.3");
+  }
+  
+  // Links animations
+  const footerLinks = document.querySelectorAll(".fireworks-footer .footer-links li");
+  if (footerLinks.length > 0) {
+    footerContent.from(footerLinks, {
+      opacity: 0,
+      x: -20,
+      duration: 0.5,
+      stagger: 0.1,
+      ease: "power2.out"
+    }, "-=0.2");
+  }
+  
+  // Hours and contact animations
+  const footerInfo = document.querySelectorAll(".fireworks-footer .footer-hours li, .fireworks-footer .footer-contact li");
+  if (footerInfo.length > 0) {
+    footerContent.from(footerInfo, {
+      opacity: 0,
+      y: 15,
+      duration: 0.5,
+      stagger: 0.1,
+      ease: "power2.out"
+    }, "-=0.5");
+  }
+  
+  // Copyright section
+  const footerCopyright = document.querySelector(".fireworks-footer .border-top");
+  if (footerCopyright) {
+    footerContent.from(footerCopyright, {
+      opacity: 0,
+      y: 10,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.2");
+  }
+  
+  // Update current year in footer
+  const yearElement = document.getElementById('currentYear');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+}
 
+// Add an event listener for window resize that only refreshes ScrollTrigger
+// without destroying existing instances
+window.addEventListener('resize', function() {
+  if (typeof ScrollTrigger !== 'undefined') {
+    // Just refresh instead of killing and recreating
+    ScrollTrigger.refresh();
+  }
+});
